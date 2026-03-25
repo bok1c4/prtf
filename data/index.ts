@@ -24,7 +24,7 @@ export const personal: PersonalInfo = {
 export const skills: Skill[] = [
   {
     category: "Languages",
-    items: ["Go", "Python", "TypeScript", "JavaScript", "Java", "PHP"],
+    items: ["Go", "Python", "TypeScript", "JavaScript", "PHP"],
   },
   {
     category: "Backend",
