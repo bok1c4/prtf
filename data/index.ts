@@ -8,8 +8,8 @@ import type {
 
 export const personal: PersonalInfo = {
   name: "Boris Nikolic",
-  title: "Software Engineer",
-  bio: "Software Engineer with 4+ years of experience building backend systems. Specialized in distributed systems, API-driven architectures, and data-intensive applications. 1+ year delivering production systems for EU clients, including Fairphone, in sustainability and supply chain domains.",
+  title: "Software Engineer & AI Developer",
+  bio: "Software Engineer with 4+ years of experience building backend systems. Specialized in distributed systems, API-driven architectures, and AI-augmented development workflows. Building with Claude, OpenCode, and multi-agent architectures to deliver production systems 10x faster.",
   email: "kibnet@pm.me",
   location: "Belgrade, Serbia",
   links: [
@@ -37,6 +37,27 @@ export const skills: Skill[] = [
       "Microservices",
       "API Gateway",
       "Clean Architecture",
+    ],
+  },
+  {
+    category: "AI Development",
+    items: [
+      "Claude (Anthropic)",
+      "OpenCode",
+      "Multi-Agent Orchestration",
+      "Context Engineering",
+      "Cursor/Windsurf",
+      "AI Code Review",
+    ],
+  },
+  {
+    category: "AI Workflow",
+    items: [
+      "Agent Task Decomposition",
+      "Iterative Refinement",
+      "Human-in-the-Loop Review",
+      "Automated Testing Pipelines",
+      "Documentation Generation",
     ],
   },
   {
@@ -109,13 +130,16 @@ export const experience: Experience[] = [
     company: "AMT Group",
     period: "2025 — Present",
     description:
-      "Delivering production systems for EU clients including Fairphone in sustainability and supply chain domains. Designing and implementing backend services for data processing, reporting, and workflow automation across Python/Odoo, Go, and Node.js/TypeScript stacks.",
+      "Delivering production systems for EU clients including Fairphone in sustainability and supply chain domains. Designing and implementing backend services with AI-augmented development workflows using Claude and OpenCode. Building multi-agent pipelines for accelerated delivery.",
     highlights: [
       "Built GHG emissions tracking and reporting system for Fairphone supply chain operations",
       "Implemented procurement and material planning platform with automated workflow logic",
       "Optimized complex PostgreSQL queries and improved performance on large datasets",
       "Implemented traversal of account.move journal items and purchase.order.line records to derive actual received quantities; applied emission factor and assignation rules to compute CO2e (GHG) and material coverage (FairMaterials) using product recipes",
       "Worked in containerized, service-based environments using Docker",
+      "Pioneered AI-driven development workflows reducing implementation time by 10x",
+      "Built multi-agent architectures with Claude and OpenCode for complex feature development",
+      "Implemented iterative AI review cycles ensuring code quality and architectural coherence",
     ],
   },
 ];
