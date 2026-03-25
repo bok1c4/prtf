@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A modern portfolio web application (not yet scaffolded). See `prtf.md` for the full spec.
+A personal portfolio web application. See `prtf.md` for the full spec.
 
 ## Stack
 
-- **Next.js** (App Router) + **TypeScript**
-- **Tailwind CSS** + **shadcn/ui**
+- **Next.js 15** (App Router) + **TypeScript**
+- **Tailwind CSS v4** (no shadcn/ui — uses plain Tailwind + CSS variables)
 - **Bun** as package manager (production runtime: Node LTS)
 
 ## Commands
@@ -22,27 +22,21 @@ bun run start        # start production server
 bun run lint         # run ESLint
 ```
 
-## Folder Structure
-
-```
-app/          # Next.js App Router pages and layouts
-components/   # reusable UI components
-sections/     # page sections (Hero, About, Projects, Contact, etc.)
-lib/          # utility functions
-types/        # TypeScript type definitions
-data/         # config-driven data/content
-```
+No test runner is configured.
 
 ## Architecture
 
-- Use **server components** by default; add `"use client"` only when necessary
-- Sections are modular and data-driven — render from arrays/objects, not hardcoded markup
-- shadcn/ui for UI primitives; Tailwind for all custom styling
-- No tight coupling between sections
+- All portfolio content lives in `data/index.ts` — sections are pure presentation layers that import from it
+- Types for all data structures are in `types/index.ts`
+- `lib/utils.ts` exports `cn()` (clsx + tailwind-merge) for class composition
+- All sections are server components; `"use client"` only for interactive components (e.g. `components/ResumeButton.tsx`)
+- Tailwind v4 is imported via `@import "tailwindcss"` in `globals.css`, not via `tailwind.config`; theme is done with CSS variables
+- TypeScript path alias: `@/*` → project root
+- `next.config.ts` sets `output: "standalone"` for Docker
 
 ## Docker
 
-Multi-stage build, Node LTS production image, `next start` entrypoint, port 3000.
+Multi-stage build: Bun installs + Next.js builds in stage 1, Node LTS Alpine runs `node server.js` on port 3000 in stage 2.
 
 ## Engineering Approach
 

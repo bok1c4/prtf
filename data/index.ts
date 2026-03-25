@@ -148,3 +148,8 @@ export const education: Education = {
   degree: "Bachelor in Software Engineering",
   status: "In progress",
 };
+
+export const resume = {
+  url: "/resume.pdf",
+  label: "Download Resume",
+};

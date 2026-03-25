@@ -1,4 +1,5 @@
 import { personal } from "@/data";
+import ResumeButton from "@/components/ResumeButton";
 
 export default function Hero() {
   return (
@@ -24,6 +25,7 @@ export default function Hero() {
               {link.label}
             </a>
           ))}
+          <ResumeButton />
           <a
             href={`mailto:${personal.email}`}
             className="text-sm font-medium bg-white text-black px-4 py-2 rounded-md hover:bg-neutral-200 transition-colors"
