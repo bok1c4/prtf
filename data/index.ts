@@ -100,6 +100,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     repo: "https://github.com/bok1c4/toy_store",
+    demo: { repoUrl: "https://github.com/bok1c4/toy_store" },
   },
   {
     title: "pwman",

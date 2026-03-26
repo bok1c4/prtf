@@ -4,6 +4,7 @@ export interface Project {
   tags: string[];
   url?: string;
   repo?: string;
+  demo?: { repoUrl: string };
 }
 
 export interface SocialLink {
