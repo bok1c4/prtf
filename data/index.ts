@@ -8,8 +8,8 @@ import type {
 
 export const personal: PersonalInfo = {
   name: "Boris Nikolic",
-  title: "Software Engineer & AI Developer",
-  bio: "Software Engineer with 3.5+ years of experience building backend systems. Specializing in distributed systems, API-driven architectures, and AI-augmented development workflows. Building with Claude, OpenCode, and multi-agent architectures to deliver production systems 10x faster.",
+  title: "Software Engineer & Full-Stack Developer",
+  bio: "Software Engineer with 3.5+ years of experience building backend systems and full-stack applications. Focused on distributed systems, API-driven architectures, and practical AI-assisted development workflows. Experienced in building production-ready systems with modern tooling, automation, and scalable engineering practices.",
   email: "kibnet@pm.me",
   location: "Belgrade, Serbia",
   links: [
