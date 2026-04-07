@@ -57,16 +57,11 @@ export const skills: Skill[] = [
       "Iterative Refinement",
       "Human-in-the-Loop Review",
       "Automated Testing Pipelines",
-      "Documentation Generation",
     ],
   },
   {
     category: "Data & Infrastructure",
-    items: ["PostgreSQL", "RabbitMQ", "Docker", "Docker Swarm", "CI/CD"],
-  },
-  {
-    category: "Auth & Security",
-    items: ["Keycloak", "OAuth2", "OpenID Connect", "Encryption"],
+    items: ["PostgreSQL", "RabbitMQ", "Docker", "CI/CD"],
   },
 ];
 
@@ -135,7 +130,7 @@ export const experience: Experience[] = [
       "Built GHG emissions tracking and reporting system for Fairphone supply chain operations",
       "Implemented procurement and material planning platform with automated workflow logic",
       "Optimized complex PostgreSQL queries and improved performance on large datasets",
-      "Traversed accounting journal entries and Purchase Order lines to derive actual received quantities; applied emission factors and assignment rules to compute CO2e values and material coverage metrics using product recipes",
+      "Implemented traversal of account.move journal items and purchase.order.line records to derive actual received quantities; applied emission factor and assignation rules to compute CO2e (GHG) and material coverage (FairMaterials) using product recipes",
       "Worked in containerized, service-based environments using Docker",
       "Pioneered AI-driven development workflows reducing implementation time by 10x",
       "Built multi-agent architectures with Claude and OpenCode for complex feature development",
