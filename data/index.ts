@@ -8,8 +8,8 @@ import type {
 
 export const personal: PersonalInfo = {
   name: "Boris Nikolic",
-  title: "Software Engineer & Full-Stack Developer",
-  bio: "Software Engineer with 3.5+ years of experience building backend systems and full-stack applications. Focused on distributed systems, API-driven architectures, and practical AI-assisted development workflows. Experienced in building production-ready systems with modern tooling, automation, and scalable engineering practices.",
+  title: "Student Software Engineer",
+  bio: "Student Software Engineer with around 3 years of experience building backend systems, distributed architectures, and full-stack applications. Focused on production-grade systems for enterprise clients, with deep expertise in Go, Python, and TypeScript. Experienced in modern development workflows.",
   email: "kibnet@pm.me",
   location: "Belgrade, Serbia",
   links: [
@@ -28,7 +28,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "NestJS", "Odoo (Python)"],
+    items: ["Node.js", "NestJS", "Odoo"],
   },
   {
     category: "Architecture",
@@ -41,14 +41,7 @@ export const skills: Skill[] = [
   },
   {
     category: "AI Development",
-    items: [
-      "Claude (Anthropic)",
-      "OpenCode",
-      "Multi-Agent Orchestration",
-      "Context Engineering",
-      "Cursor/Windsurf",
-      "AI Code Review",
-    ],
+    items: ["Claude (Anthropic)", "Context Engineering"],
   },
   {
     category: "AI Workflow",
@@ -67,74 +60,46 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "GHG Emissions Tracker",
+    title: "Multi-Client CDC Engine",
     description:
-      "Enterprise-grade system for tracking and reporting greenhouse gas emissions across supply chain operations at Fairphone. Designed the reporting layer using SQL views and aggregated data models, optimized complex queries on large datasets, and contributed to CO2e emissions calculation pipelines.",
-    tags: ["Python", "Odoo", "PostgreSQL"],
-  },
-  {
-    title: "FairMaterials",
-    description:
-      "Procurement and material planning platform for supply chain management at Fairphone. Implemented inventory validation, automated procurement workflows, purchase order generation, and material coverage tracking — with transactional integrity and correct workflow state transitions.",
+      "Change Data Capture engine replicating Odoo ERP data to downstream OLAP warehouses. Agent + Control Plane architecture with PostgreSQL AFTER DELETE triggers, independent per-client cursors, 3-stage Request-Fetch-ACK fault tolerance, and coordinated garbage collection.",
     tags: ["Python", "Odoo", "PostgreSQL"],
   },
   {
     title: "Toy Store",
     description:
-      "Full-stack Serbian e-commerce platform for selling toys, built with a Go backend API, Next.js 14 frontend, PostgreSQL database, and Redis cache — all orchestrated through Docker Compose and served behind an Nginx reverse proxy. Features user authentication with dual-token JWT (access + refresh with Redis revocation), shopping cart and wishlist management, Stripe test mode payments, order history with cancellation requests, and an admin panel with user/order analytics. The catalog is fetched from an external API and cached in Redis using a cache-aside strategy.",
-    tags: [
-      "Go",
-      "Gin",
-      "Next.js 14",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "Nginx",
-      "Stripe",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
+      "Full-stack e-commerce platform with dual-token JWT auth, shopping cart, Stripe payments, order management, and admin analytics. Catalog cached via Redis cache-aside strategy.",
+    tags: ["Go", "Next.js 14", "PostgreSQL", "Redis", "Stripe"],
     repo: "https://github.com/bok1c4/toy_store",
   },
   {
-    title: "pwman",
+    title: "Control Management System Platform",
     description:
-      "Secure, open-source password manager with peer-to-peer synchronization — in active development. Implements hybrid encryption (AES-256-GCM + X25519), P2P LAN sync via mDNS and TLS 1.3, Lamport clock conflict resolution, TOTP device pairing, and multiple vault support. Exposes CLI, REST API, and a Tauri desktop app.",
-    tags: ["Go", "SQLite", "React", "TypeScript", "Tauri 2", "libp2p"],
-    repo: "https://github.com/bok1c4/password_manager",
+      "Multi-role CMS web application with authentication, orders, revenue reports, and notification system.",
+    tags: ["Go", "Next.js", "React", "TypeScript", "PostgreSQL"],
   },
   {
     title: "Sales Report System",
     description:
-      "Backend system for generating business analytics and automated reports. Features invoice CRUD, scheduled daily report generation, RabbitMQ message queue processing, and email notifications — built with a hybrid microservice architecture (HTTP + RabbitMQ in a single process).",
-    tags: ["NestJS", "TypeScript", "MongoDB", "RabbitMQ", "Docker"],
+      "Backend analytics with invoice CRUD, scheduled daily report generation, RabbitMQ queue processing, and email notifications in a hybrid microservice architecture.",
+    tags: ["NestJS", "TypeScript", "MongoDB", "RabbitMQ"],
     repo: "https://github.com/bok1c4/sales-report-system",
-  },
-  {
-    title: "Olympic Games Simulator",
-    description:
-      "JavaScript simulation of an Olympic basketball tournament with realistic win probability calculations. Implements a circular rotation algorithm for fair round-robin scheduling, FIBA-compliant tiebreaker logic including the 'circle method', and a constraint-based draw system for elimination brackets.",
-    tags: ["JavaScript", "Node.js"],
-    repo: "https://github.com/bok1c4/cdbhnd-olimpijske-igre",
   },
 ];
 
 export const experience: Experience[] = [
   {
-    role: "Software Engineer",
+    role: "Contractor",
     company: "AMT Group",
     period: "2025 — Present",
     description:
-      "Delivering production systems for EU clients including Fairphone in sustainability and supply chain domains. Designing and implementing backend services with AI-augmented development workflows using Claude and OpenCode. Building multi-agent pipelines for accelerated delivery.",
+      "Production systems for EU clients (Fairphone) in sustainability and supply chain domains using AI-augmented workflows.",
     highlights: [
-      "Built GHG emissions tracking and reporting system for Fairphone supply chain operations",
-      "Implemented procurement and material planning platform with automated workflow logic",
-      "Optimized complex PostgreSQL queries and improved performance on large datasets",
-      "Implemented traversal of account.move journal items and purchase.order.line records to derive actual received quantities; applied emission factor and assignation rules to compute CO2e (GHG) and material coverage (FairMaterials) using product recipes",
-      "Worked in containerized, service-based environments using Docker",
-      "Pioneered AI-driven development workflows reducing implementation time by 10x",
-      "Built multi-agent architectures with Claude and OpenCode for complex feature development",
-      "Implemented iterative AI review cycles ensuring code quality and architectural coherence",
+      "Built GHG emissions tracking & reporting system for Fairphone supply chain — CO2e calculations via emission factors, optimized complex PostgreSQL queries on large datasets",
+      "Implemented FairMaterials procurement platform — automated workflow logic, material coverage tracking, and period-based reporting over supply chain data",
+      "Designed and building a multi-client CDC engine for replicating Odoo ERP data to OLAP warehouses — per-client cursor isolation, 3-stage acknowledgment protocol, and coordinated garbage collection with PostgreSQL triggers for hard-delete capture",
+      "Designed system architecture for client-facing web shop integrating API Gateway, Odoo backend, and frontend services",
+      "Pioneered multi-agent AI pipelines (Claude + OpenCode) reducing implementation time by 10x; iterative AI review cycles for code quality and architectural coherence",
     ],
   },
 ];
