@@ -11,7 +11,7 @@ export default function Projects() {
               key={project.title}
               className="p-6 border border-neutral-800 rounded-lg hover:border-neutral-600 transition-colors"
             >
-              <div className="flex items-start justify-between gap-4 mb-2">
+              <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="font-semibold">{project.title}</h3>
                 <div className="flex gap-3 shrink-0">
                   {project.url && (
@@ -36,6 +36,11 @@ export default function Projects() {
                   )}
                 </div>
               </div>
+              {project.context && (
+                <p className="text-[11px] font-mono uppercase tracking-widest text-neutral-500 mb-3">
+                  {project.context}
+                </p>
+              )}
               <p className="text-sm text-neutral-400 mb-4 leading-relaxed">
                 {project.description}
               </p>

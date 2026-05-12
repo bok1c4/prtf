@@ -2,6 +2,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  context?: string;
   url?: string;
   repo?: string;
 }
@@ -18,11 +19,6 @@ export interface PersonalInfo {
   email: string;
   location: string;
   links: SocialLink[];
-}
-
-export interface Skill {
-  category: string;
-  items: string[];
 }
 
 export interface Experience {
