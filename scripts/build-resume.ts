@@ -1,6 +1,7 @@
 import PDFDocument from "pdfkit";
 import { createWriteStream, readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   personal,
   experience,
@@ -8,7 +9,8 @@ import {
   education,
 } from "../data";
 
-const OUT = resolve(import.meta.dir, "../public/resume.pdf");
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const OUT = resolve(SCRIPT_DIR, "../public/resume.pdf");
 
 const PAGE = { size: "A4" as const, margin: 38 };
 const COLOR = {
