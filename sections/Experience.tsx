@@ -23,7 +23,7 @@ export default function Experience() {
               <ul className="grid gap-1.5">
                 {entry.highlights.map((point) => (
                   <li key={point} className="text-sm text-neutral-500 flex gap-2">
-                    <span className="text-neutral-700 shrink-0">—</span>
+                    <span className="text-neutral-700 shrink-0">·</span>
                     {point}
                   </li>
                 ))}

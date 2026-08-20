@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Source for public/resume.pdf. Regenerate with:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome Dev" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=public/resume.pdf resume.html
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Boris Nikolic Resume</title>
+<style>
+  @page { size: A4; margin: 11mm 15mm 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.45;
+    color: #1f2937;
+  }
+  a { color: #2563eb; text-decoration: none; }
+  h1 { font-size: 21pt; letter-spacing: -0.5px; }
+  .subtitle { color: #2563eb; font-size: 11pt; margin-top: 2px; }
+  .contact { color: #4b5563; margin-top: 5px; font-size: 9pt; }
+  .contact span { color: #9ca3af; padding: 0 4px; }
+  .rule { border-bottom: 2px solid #111827; margin: 8px 0 10px; }
+  .summary { color: #374151; }
+  h2 {
+    color: #2563eb;
+    font-size: 9.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 10px 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  table.skills { border-collapse: collapse; width: 100%; }
+  table.skills td { padding: 1.5px 0; vertical-align: top; }
+  table.skills td.cat { font-weight: bold; width: 100px; padding-right: 10px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-head .role { font-size: 10.5pt; font-weight: bold; }
+  .job-head .company { color: #2563eb; font-weight: normal; font-size: 9.6pt; }
+  .job-head .period { color: #6b7280; font-style: italic; }
+  .job-blurb { color: #6b7280; margin: 1px 0 3px; }
+  ul { list-style: none; margin-top: 2px; }
+  li { padding-left: 12px; position: relative; margin-bottom: 2px; }
+  li::before { content: "\25B8"; color: #2563eb; position: absolute; left: 0; font-size: 8pt; top: 1px; }
+  .proj { margin-bottom: 6px; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .proj-head .name { font-weight: bold; font-size: 10pt; }
+  .proj-head .stack { color: #2563eb; font-size: 8.6pt; }
+  .proj p { color: #374151; }
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu-head .degree { font-weight: bold; font-size: 10.5pt; }
+  .edu-head .status { color: #6b7280; font-style: italic; }
+</style>
+</head>
+<body>
+  <h1>Boris Nikolic</h1>
+  <div class="subtitle">Software Engineer &middot; Backend &amp; Distributed Systems</div>
+  <div class="contact">
+    Belgrade, Serbia <span>|</span>
+    <a href="mailto:borisnikolic2302@gmail.com">borisnikolic2302@gmail.com</a> <span>|</span>
+    <a href="https://github.com/bok1c4">GitHub</a> <span>|</span>
+    <a href="https://www.linkedin.com/in/boris-nikolic-a44a2126a/">LinkedIn</a> <span>|</span>
+    <a href="https://prtf-omega.vercel.app/">Portfolio</a>
+  </div>
+  <div class="rule"></div>
+
+  <p class="summary">
+    Software engineer with 3+ years building production-grade backend systems, distributed
+    architectures, and full-stack applications for enterprise clients. Specialized in Go, Python,
+    and TypeScript, with deep experience in PostgreSQL and event-driven architecture. Uses modern
+    AI tooling (Claude) as a core part of the engineering loop, from design to code review and
+    refactoring, not just code completion.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <table class="skills">
+    <tr><td class="cat">Languages</td><td>Go, Python, TypeScript, JavaScript, Java, PHP, SQL</td></tr>
+    <tr><td class="cat">Backend</td><td>Node.js, NestJS, Odoo, REST, Microservices</td></tr>
+    <tr><td class="cat">Data &amp; Infra</td><td>PostgreSQL, MongoDB, Redis, RabbitMQ, Docker, CI/CD</td></tr>
+    <tr><td class="cat">Architecture</td><td>Distributed Systems, API Gateway, Clean Architecture, CDC, Event-Driven Design</td></tr>
+    <tr><td class="cat">AI Engineering</td><td>Claude, Kimi, ChatGPT, Local LLMs, Prompt Engineering</td></tr>
+    <tr><td class="cat">Frontend</td><td>React, Next.js 14, TypeScript</td></tr>
+  </table>
+
+  <h2>Experience</h2>
+  <div class="job-head">
+    <div class="role">Software Engineer (Contractor) <span class="company">&middot; AMT Group</span></div>
+    <div class="period">2025 - Present</div>
+  </div>
+  <p class="job-blurb">Production systems for EU clients (Fairphone) in the sustainability and supply chain domains.</p>
+  <ul>
+    <li>Built GHG emissions tracking and reporting system for Fairphone's supply chain: implemented CO2e calculations via emission factors and optimized complex PostgreSQL queries over large datasets.</li>
+    <li>Implemented FairMaterials procurement platform with automated workflow logic, material coverage tracking, and period-based reporting across supply chain data.</li>
+    <li>Designed and built a multi-client CDC engine replicating Odoo ERP data to OLAP warehouses: per-client cursor isolation, 3-stage acknowledgment protocol, and coordinated garbage collection using PostgreSQL triggers for hard-delete capture.</li>
+    <li>Architected a client-facing web shop integrating API Gateway, Odoo backend, and frontend services across multiple service boundaries.</li>
+    <li>Claude for AI-assisted development: design, code review, and refactoring using prompt engineering techniques and iterative AI review cycles to cut implementation time by 10x.</li>
+  </ul>
+
+  <h2>Selected Projects</h2>
+  <div class="proj">
+    <div class="proj-head"><span class="name">Multi-Client CDC Engine</span><span class="stack">Python &middot; Odoo &middot; PostgreSQL</span></div>
+    <p>Change Data Capture engine replicating Odoo ERP data to downstream OLAP warehouses. Agent + Control Plane architecture with PostgreSQL AFTER DELETE triggers, independent per-client cursors, 3-stage Request-Fetch-ACK fault tolerance, and coordinated garbage collection.</p>
+  </div>
+  <div class="proj">
+    <div class="proj-head"><span class="name">Toy Store &middot; Full-Stack E-commerce</span><span class="stack">Go &middot; Next.js 14 &middot; PostgreSQL &middot; Redis &middot; Stripe</span></div>
+    <p>Full-stack e-commerce platform with dual-token JWT authentication, shopping cart, Stripe payment integration, order management, and admin analytics. Catalog cached via Redis cache-aside strategy for sub-100ms response times.</p>
+  </div>
+  <div class="proj">
+    <div class="proj-head"><span class="name">Control Management System Platform</span><span class="stack">Go &middot; Next.js &middot; React &middot; TypeScript &middot; PostgreSQL</span></div>
+    <p>Multi-role CMS web application featuring authentication, order management, revenue reporting, and a real-time notification system with role-based access control.</p>
+  </div>
+  <div class="proj">
+    <div class="proj-head"><span class="name">Sales Report System</span><span class="stack">NestJS &middot; TypeScript &middot; MongoDB &middot; RabbitMQ</span></div>
+    <p>Backend analytics service with invoice CRUD, scheduled daily report generation, RabbitMQ queue processing, and email notifications, built on a hybrid microservice architecture.</p>
+  </div>
+
+  <h2>Education</h2>
+  <div class="edu-head">
+    <span class="degree">Bachelor of Software Engineering</span>
+    <span class="status">In Progress · 4th Year</span>
+  </div>
+</body>
+</html>

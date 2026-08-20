@@ -8,9 +8,9 @@ import type {
 
 export const personal: PersonalInfo = {
   name: "Boris Nikolic",
-  title: "Student Software Engineer",
-  bio: "Student Software Engineer with around 3 years of experience building backend systems, distributed architectures, and full-stack applications. Focused on production-grade systems for enterprise clients, with deep expertise in Go, Python, and TypeScript. Experienced in modern development workflows.",
-  email: "kibnet@pm.me",
+  title: "Software Engineer",
+  bio: "Software Engineer with around 3 years of experience building production-grade backend systems, distributed architectures, and full-stack applications for enterprise clients. Deep expertise in Go, Python, and TypeScript. Uses modern AI tooling (Claude) as a core part of the engineering loop, from design to code review and refactoring, not just code completion.",
+  email: "borisnikolic2302@gmail.com",
   location: "Belgrade, Serbia",
   links: [
     { label: "GitHub", url: "https://github.com/bok1c4" },
@@ -24,7 +24,7 @@ export const personal: PersonalInfo = {
 export const skills: Skill[] = [
   {
     category: "Languages",
-    items: ["Go", "Python", "TypeScript", "JavaScript", "PHP"],
+    items: ["Go", "Python", "TypeScript", "JavaScript", "Java", "PHP", "SQL"],
   },
   {
     category: "Backend",
@@ -36,25 +36,17 @@ export const skills: Skill[] = [
       "Distributed Systems",
       "Microservices",
       "API Gateway",
+      "Event-Driven Design",
       "Clean Architecture",
     ],
   },
   {
-    category: "AI Development",
-    items: ["Claude (Anthropic)", "Context Engineering"],
-  },
-  {
-    category: "AI Workflow",
-    items: [
-      "Agent Task Decomposition",
-      "Iterative Refinement",
-      "Human-in-the-Loop Review",
-      "Automated Testing Pipelines",
-    ],
+    category: "AI Engineering",
+    items: ["Claude", "Kimi", "ChatGPT", "Local LLMs", "Prompt Engineering"],
   },
   {
     category: "Data & Infrastructure",
-    items: ["PostgreSQL", "RabbitMQ", "Docker", "CI/CD"],
+    items: ["PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Docker", "CI/CD"],
   },
 ];
 
@@ -91,22 +83,22 @@ export const experience: Experience[] = [
   {
     role: "Contractor",
     company: "AMT Group",
-    period: "2025 — Present",
+    period: "2025 - Present",
     description:
-      "Production systems for EU clients (Fairphone) in sustainability and supply chain domains using AI-augmented workflows.",
+      "Production systems for EU clients (Fairphone) in the sustainability and supply chain domains.",
     highlights: [
-      "Built GHG emissions tracking & reporting system for Fairphone supply chain — CO2e calculations via emission factors, optimized complex PostgreSQL queries on large datasets",
-      "Implemented FairMaterials procurement platform — automated workflow logic, material coverage tracking, and period-based reporting over supply chain data",
-      "Designed and building a multi-client CDC engine for replicating Odoo ERP data to OLAP warehouses — per-client cursor isolation, 3-stage acknowledgment protocol, and coordinated garbage collection with PostgreSQL triggers for hard-delete capture",
-      "Designed system architecture for client-facing web shop integrating API Gateway, Odoo backend, and frontend services",
-      "Pioneered multi-agent AI pipelines (Claude + OpenCode) reducing implementation time by 10x; iterative AI review cycles for code quality and architectural coherence",
+      "Built GHG emissions tracking and reporting system for the Fairphone supply chain: CO2e calculations via emission factors, optimized complex PostgreSQL queries on large datasets",
+      "Implemented FairMaterials procurement platform: automated workflow logic, material coverage tracking, and period-based reporting over supply chain data",
+      "Designed and building a multi-client CDC engine replicating Odoo ERP data to OLAP warehouses: per-client cursor isolation, 3-stage acknowledgment protocol, and coordinated garbage collection with PostgreSQL triggers for hard-delete capture",
+      "Designed system architecture for a client-facing web shop integrating API Gateway, Odoo backend, and frontend services",
+      "Claude for AI-assisted development: design, code review, and refactoring using prompt engineering techniques and iterative AI review cycles to cut implementation time by 10x",
     ],
   },
 ];
 
 export const education: Education = {
   degree: "Bachelor in Software Engineering",
-  status: "In progress",
+  status: "In progress · 4th year",
 };
 
 export const resume = {
