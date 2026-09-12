@@ -1,12 +1,387 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+/* Gruvbox dark palette exposed as design tokens. Semantic tokens
+   (canvas, ink, accent, ...) are what components use; raw gruvbox
+   colors are available as gb-* utilities for syntax-style accents. */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-canvas-2: var(--canvas-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-highlight: var(--highlight);
+  --color-highlight-soft: var(--highlight-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  --color-gb-red: var(--gb-red);
+  --color-gb-green: var(--gb-green);
+  --color-gb-yellow: var(--gb-yellow);
+  --color-gb-blue: var(--gb-blue);
+  --color-gb-purple: var(--gb-purple);
+  --color-gb-aqua: var(--gb-aqua);
+  --color-gb-orange: var(--gb-orange);
+  --color-gb-gray: var(--gb-gray);
+  --color-gb-bg1: var(--gb-bg1);
+  --color-gb-bg2: var(--gb-bg2);
+  --color-gb-bg3: var(--gb-bg3);
+  --color-gb-bg4: var(--gb-bg4);
+  --color-gb-fg0: var(--gb-fg0);
+
+  --font-sans:
+    var(--font-jetbrains), ui-monospace, "Cascadia Code", Consolas,
+    "Liberation Mono", monospace;
+  --font-mono:
+    var(--font-jetbrains), ui-monospace, "Cascadia Code", Consolas,
+    "Liberation Mono", monospace;
+  --font-display:
+    var(--font-jetbrains), ui-monospace, "Cascadia Code", Consolas,
+    "Liberation Mono", monospace;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: system-ui, -apple-system, sans-serif;
+:root {
+  --gb-bg0h: #1d2021;
+  --gb-bg0: #282828;
+  --gb-bg1: #3c3836;
+  --gb-bg2: #504945;
+  --gb-bg3: #665c54;
+  --gb-bg4: #7c6f64;
+  --gb-fg0: #fbf1c7;
+  --gb-fg1: #ebdbb2;
+  --gb-fg2: #d5c4a1;
+  --gb-fg3: #bdae93;
+  --gb-fg4: #a89984;
+  --gb-gray: #928374;
+  --gb-red: #fb4934;
+  --gb-green: #b8bb26;
+  --gb-yellow: #fabd2f;
+  --gb-blue: #83a598;
+  --gb-purple: #d3869b;
+  --gb-aqua: #8ec07c;
+  --gb-orange: #fe8019;
+
+  --canvas: var(--gb-bg0h);
+  --canvas-2: var(--gb-bg0);
+  --surface: var(--gb-bg0);
+  --surface-2: var(--gb-bg1);
+  --line: var(--gb-bg2);
+  --line-strong: var(--gb-bg3);
+  --ink: var(--gb-fg1);
+  --ink-2: var(--gb-fg2);
+  --muted: var(--gb-fg4);
+  --accent: var(--gb-yellow);
+  --accent-hover: #ffd35a;
+  --accent-soft: rgba(250, 189, 47, 0.14);
+  --highlight: var(--gb-aqua);
+  --highlight-soft: rgba(142, 192, 124, 0.14);
+  --success: var(--gb-green);
+  --warning: var(--gb-orange);
+  --error: var(--gb-red);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--gb-bg3) var(--gb-bg0h);
+    scrollbar-width: thin;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--gb-yellow);
+    color: var(--gb-bg0h);
+  }
+
+  a,
+  button,
+  [tabindex] {
+    outline-color: var(--accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  color: var(--muted);
+}
+
+@utility link-inline {
+  color: var(--gb-aqua);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--gb-aqua) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+  &:hover {
+    color: var(--gb-yellow);
+    text-decoration-color: var(--gb-yellow);
+  }
+}
+
+@layer components {
+  /* A bordered pane with its title sitting on the top border. */
+  .pane {
+    position: relative;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    background: var(--canvas);
+    padding: 1.4rem 1.1rem 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .pane {
+      padding: 1.75rem 1.6rem 1.6rem;
+    }
+  }
+  .pane-title {
+    position: absolute;
+    top: -0.75em;
+    left: 0.9rem;
+    padding: 0 0.4rem;
+    background: var(--canvas);
+    color: var(--gb-fg4);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  /* Shell prompt line: user@host:path$ command */
+  .prompt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* Editor buffer with a line-number gutter and a status line. */
+  .buffer {
+    display: grid;
+    gap: 0;
+  }
+  .buffer-row {
+    display: grid;
+    grid-template-columns: 2.6ch minmax(0, 1fr);
+    gap: 1ch;
+    padding: 0.05rem 0;
+  }
+  .gutter {
+    color: var(--gb-bg4);
+    text-align: right;
+    user-select: none;
+    font-size: 0.8rem;
+    line-height: inherit;
+    padding-top: 0.08em;
+  }
+
+  .statusline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: var(--gb-bg1);
+    color: var(--ink-2);
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .statusline > * {
+    padding: 0 0.7rem;
+  }
+  .statusline .seg-mode {
+    background: var(--gb-green);
+    color: var(--gb-bg0h);
+    font-weight: 700;
+  }
+  .statusline .seg-strong {
+    background: var(--gb-bg2);
+    color: var(--ink);
+  }
+  .statusline .seg-accent {
+    background: var(--gb-yellow);
+    color: var(--gb-bg0h);
+    font-weight: 700;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.05em;
+    margin-left: 0.1em;
+    background: var(--ink);
+    vertical-align: text-bottom;
+    animation: cursor-blink 1.1s steps(2, start) infinite;
+  }
+  @keyframes cursor-blink {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  /* Terminal output */
+  .term-out {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  /* Responsive flow diagram: one column on small screens, one column per
+     stage from md up. Connector glyphs are decorative. */
+  .flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+  }
+  @media (min-width: 768px) {
+    .flow {
+      grid-template-columns: repeat(var(--stages, 3), minmax(0, 1fr));
+      gap: 2.25rem;
+    }
+  }
+  .flow-stage {
+    --stage-color: var(--gb-bg4);
+    position: relative;
+    border: 1px solid var(--line-strong);
+    border-top: 2px solid var(--stage-color);
+    background: var(--canvas-2);
+    border-radius: 3px;
+    padding: 0.9rem 1rem 1rem;
+  }
+  .flow-stage[data-tone="input"] {
+    --stage-color: var(--gb-aqua);
+  }
+  .flow-stage[data-tone="process"] {
+    --stage-color: var(--gb-yellow);
+  }
+  .flow-stage[data-tone="store"] {
+    --stage-color: var(--gb-blue);
+  }
+  .flow-stage[data-tone="output"] {
+    --stage-color: var(--gb-green);
+  }
+  .flow-connector {
+    position: absolute;
+    top: -0.875rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gb-bg4);
+    font-size: 1rem;
+    line-height: 1;
+  }
+  @media (min-width: 768px) {
+    .flow-connector {
+      top: 50%;
+      left: -1.125rem;
+    }
+  }
+
+  /* Resume sheet: real headings and plain lists for ATS parsers. */
+  .resume h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gb-yellow);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.35rem;
+    margin: 1.6rem 0 0.8rem;
+  }
+  .resume h3 {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .resume ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+  }
+  .resume li {
+    margin-top: 0.3rem;
+  }
+  .resume a {
+    color: var(--gb-aqua);
+    text-decoration: none;
+  }
+  .resume a:hover {
+    text-decoration: underline;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 12mm 14mm;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #17171a !important;
+  }
+  .resume {
+    --canvas: #ffffff;
+    --canvas-2: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f3f3f3;
+    --line: #cfcfcf;
+    --line-strong: #9a9a9a;
+    --ink: #17171a;
+    --ink-2: #33333a;
+    --muted: #55555c;
+    --gb-yellow: #7a4f00;
+    --gb-aqua: #1f5f45;
+    font-family: ui-sans-serif, system-ui, Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.4;
+    background: #ffffff;
+    color: #17171a;
+  }
+  .resume h2 {
+    margin: 0.9rem 0 0.45rem;
+    font-size: 0.7rem;
+  }
+  .resume li {
+    margin-top: 0.15rem;
+  }
+  a {
+    color: inherit;
+  }
 }

@@ -1,52 +1,19 @@
+import ButtonLink from "@/components/ui/ButtonLink";
 import { resume } from "@/data";
 
-export default function ResumeButton() {
+export default function ResumeButton({
+  size = "md",
+}: {
+  size?: "md" | "sm";
+}) {
   return (
     <>
-      <a
-        href={resume.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-neutral-700 rounded-md hover:border-neutral-400 transition-colors"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
-          <circle cx="12" cy="12" r="3" />
-        </svg>
-        View Resume
-      </a>
-      <a
-        href={resume.url}
-        download
-        className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-neutral-700 rounded-md hover:border-neutral-400 transition-colors"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <polyline points="7 10 12 15 17 10" />
-          <line x1="12" y1="15" x2="12" y2="3" />
-        </svg>
-        Get Resume
-      </a>
+      <ButtonLink href="/resume" variant="secondary" size={size} keyHint="r">
+        resume
+      </ButtonLink>
+      <ButtonLink href={resume.url} download variant="ghost" size={size}>
+        download pdf
+      </ButtonLink>
     </>
   );
 }

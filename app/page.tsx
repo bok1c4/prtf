@@ -1,19 +1,26 @@
+import Container from "@/components/ui/Container";
 import Hero from "@/sections/Hero";
+import AiWorkflow from "@/sections/AiWorkflow";
+import Work from "@/sections/Work";
+import HomeLab from "@/sections/HomeLab";
 import About from "@/sections/About";
-import Projects from "@/sections/Projects";
+import Capabilities from "@/sections/Capabilities";
 import Experience from "@/sections/Experience";
-import Education from "@/sections/Education";
 import Contact from "@/sections/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
-      <Experience />
-      <About />
-      <Projects />
-      <Education />
-      <Contact />
-    </main>
+      <Container width="full" className="space-y-6 pb-8">
+        <AiWorkflow />
+        <Work />
+        <HomeLab />
+        <About />
+        <Capabilities />
+        <Experience />
+        <Contact />
+      </Container>
+    </>
   );
 }
