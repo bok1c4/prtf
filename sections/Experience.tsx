@@ -1,37 +1,40 @@
-import { experience } from "@/data";
+import Pane from "@/components/ui/Pane";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { education, timeline } from "@/data";
 
+/** The story as `git log --oneline`, newest commit first. */
 export default function Experience() {
+  const commits = [...timeline].reverse();
   return (
-    <section id="experience" className="py-24 px-6 border-t border-neutral-800">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold mb-12">Experience</h2>
-        <div className="grid gap-10">
-          {experience.map((entry) => (
-            <div key={entry.company}>
-              <div className="flex items-baseline justify-between gap-4 mb-1">
-                <h3 className="font-semibold">{entry.role}</h3>
-                <span className="text-sm font-mono text-neutral-500 shrink-0">
-                  {entry.period}
-                </span>
-              </div>
-              <p className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-3">
-                {entry.company}
-              </p>
-              <p className="text-sm text-neutral-400 mb-4 leading-relaxed">
-                {entry.description}
-              </p>
-              <ul className="grid gap-1.5">
-                {entry.highlights.map((point) => (
-                  <li key={point} className="text-sm text-neutral-500 flex gap-2">
-                    <span className="text-neutral-700 shrink-0">·</span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <Pane id="experience" title="~/experience.md" labelledBy="experience-title">
+      <SectionHeader
+        id="experience-title"
+        command="git log --oneline story"
+        title="How I got here"
+        lede="From school robots to shipping software, one commit at a time."
+      />
+      <ol className="space-y-3 text-[14px]" aria-label="Story, newest first">
+        {commits.map((entry, index) => (
+          <li
+            key={entry.title}
+            className="grid gap-1 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-3"
+          >
+            <span className="text-gb-yellow" aria-hidden="true">
+              {index === 0 ? "HEAD -> main" : `HEAD~${index}`}
+            </span>
+            <span>
+              <span className="text-ink">
+                <span className="text-gb-green">{entry.ref}:</span> {entry.title}
+              </span>
+              <span className="block leading-relaxed text-ink-2">{entry.detail}</span>
+            </span>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-6 text-[13.5px] text-muted">
+        <span className="text-gb-blue">education:</span> {education.degree},{" "}
+        {education.status.toLowerCase()}
+      </p>
+    </Pane>
   );
 }
