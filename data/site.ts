@@ -1,5 +1,5 @@
 export const SITE = {
-  url: "https://prtf-omega.vercel.app",
+  url: "https://bok1c4.com",
   name: "Boris Nikolic",
   title: "Boris Nikolic · Software Developer",
   description:

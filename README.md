@@ -1,6 +1,6 @@
 # Boris Nikolic, portfolio
 
-Personal portfolio and resume with a terminal look: JetBrains Mono, a gruvbox dark palette, tmux-style tabs, a lualine-style status line, and an interactive shell. Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4. Live at https://prtf-omega.vercel.app.
+Personal portfolio and resume with a terminal look: JetBrains Mono, a gruvbox dark palette, tmux-style tabs, a lualine-style status line, and an interactive shell. Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4. Live at https://bok1c4.com.
 
 ## Shell and keyboard
 
