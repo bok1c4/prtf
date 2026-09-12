@@ -57,7 +57,8 @@ export const positioning: Positioning = {
     },
     {
       title: "Full-stack delivery",
-      detail: "Next.js and React frontends, JWT auth, payments, admin tooling",
+      detail:
+        "React, Angular, and Next.js frontends; Express, Laravel, Django, and Spring Boot backends; JWT auth, payments, admin tooling",
     },
     {
       title: "Linux and self-hosting",

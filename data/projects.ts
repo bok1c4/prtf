@@ -194,4 +194,26 @@ export const moreWork: MoreWork[] = [
       external: true,
     },
   },
+  {
+    title: "HTTP forward proxy in C++",
+    description:
+      "Multi-hop HTTP forward proxy on native sockets: an HTTP server with GET and POST handling, single-hop forwarding, and chained routing through several proxy nodes. Layered AES and RSA encryption between hops is in progress.",
+    stack: ["C++", "Sockets", "AES/RSA"],
+    link: {
+      label: "Repository",
+      href: "https://github.com/bok1c4/HTTP-Proxy",
+      external: true,
+    },
+  },
+  {
+    title: "Terminal password manager in C++20",
+    description:
+      "Secrets stored in PostgreSQL under a hybrid scheme: each password encrypted with a fresh AES-256-GCM key, that key GPG-encrypted to your key's fingerprint, so the same vault opens on any machine holding the key. CMake build, Docker Compose for the database.",
+    stack: ["C++20", "PostgreSQL", "GPG", "AES-256-GCM", "CMake"],
+    link: {
+      label: "Repository",
+      href: "https://github.com/bok1c4/Password-Manager",
+      external: true,
+    },
+  },
 ];

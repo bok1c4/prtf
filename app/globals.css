@@ -348,9 +348,12 @@
 
 @page {
   size: A4;
-  margin: 12mm 14mm;
+  margin: 10mm 12mm;
 }
 
+/* Print rules sit outside every @layer on purpose: unlayered styles win
+   over Tailwind's layered utilities, so the pt sizes below override the
+   px sizes used on screen and keep the resume on two A4 pages. */
 @media print {
   body {
     background: #ffffff !important;
@@ -369,17 +372,43 @@
     --gb-yellow: #7a4f00;
     --gb-aqua: #1f5f45;
     font-family: ui-sans-serif, system-ui, Arial, sans-serif;
-    font-size: 10.2pt;
-    line-height: 1.4;
+    font-size: 9.5pt;
+    line-height: 1.32;
     background: #ffffff;
     color: #17171a;
   }
+  .resume h1 {
+    font-size: 16pt;
+    line-height: 1.15;
+  }
+  .resume header p {
+    font-size: 9.5pt;
+    margin-top: 0.15rem;
+  }
   .resume h2 {
-    margin: 0.9rem 0 0.45rem;
-    font-size: 0.7rem;
+    margin: 0.65rem 0 0.3rem;
+    font-size: 7.5pt;
+    padding-bottom: 0.2rem;
+  }
+  .resume h3 {
+    font-size: 10pt;
+  }
+  .resume p,
+  .resume li,
+  .resume dt,
+  .resume dd {
+    font-size: 9.5pt;
+    line-height: 1.32;
+  }
+  .resume section > p,
+  .resume article > p {
+    margin-top: 0.15rem;
+  }
+  .resume article {
+    margin-top: 0.4rem;
   }
   .resume li {
-    margin-top: 0.15rem;
+    margin-top: 0.08rem;
   }
   a {
     color: inherit;

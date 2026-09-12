@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-12: broader technology inventory
+
+Added after a scan of the owner's own repositories (public and private; only public ones are named on the site) plus the owner's confirmation for what no repository shows.
+
+- **Skills**: Angular (frontend job, client work, coursework), Express, Laravel, Django, Spring Boot, an MVC practice item, ORMs (Prisma, TypeORM, Mongoose, Spring Data JPA), React Router, Redux Toolkit, Vite, Bash scripting, GitHub Actions and GitLab CI in place of a generic CI/CD item, Jest, Lua. C/C++ promoted to a primary language with a socket-programming item and an "HTTP servers and proxies from scratch" item in the security and networking group.
+- **Hero and resume competencies**: "Full-stack delivery" now names React, Angular, and Next.js frontends and Express, Laravel, Django, and Spring Boot backends.
+- **Story**: a "frontend developer" commit between university and the current role ("First professional work: building web frontends, Angular included"); the resume path line follows.
+- **Also built**: the C++ multi-hop HTTP forward proxy and the C++20 password manager (PostgreSQL, GPG + AES-256-GCM), both public repositories. The resume gains one "Systems and networking in C/C++" project line.
+- `CONTENT_REVIEW.md` records what rests on the owner's word (Angular, Laravel, GitLab CI) and what the repository scan verified.
+- Print stylesheet tightened (9.5pt body, smaller margins and section gaps) so the longer resume still fits two A4 pages.
+
 ## 2026-09-12: terminal-workspace portfolio (branch `feat/terminal-redesign`)
 
 Rebuilt from the previous single-page portfolio over several review rounds with the owner. This entry describes the result.

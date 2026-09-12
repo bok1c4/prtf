@@ -5,7 +5,7 @@ export const resume: ResumeData = {
   label: "Download resume",
   headline: "Software Developer · backend-focused full-stack",
   summary:
-    "Software developer building platforms and shipping software with AI agents in the loop. Two years of professional experience in software development, backend-focused full-stack: Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js frontends. Finishing a BSc in Software Engineering (2023 – 2027). Runs a self-hosted home lab: Ubuntu servers, iptables firewalls, automated SSH hardening, Grafana and Prometheus.",
+    "Software developer building platforms and shipping software with AI agents in the loop. Two years of professional experience in software development, backend-focused full-stack: Odoo modules and data systems on PostgreSQL, Go and Python services, React, Angular, and Next.js frontends, MVC frameworks (Laravel, Django, Spring Boot) on client and university work, and systems and networking code in C and C++. Finishing a BSc in Software Engineering (2023 – 2027). Runs a self-hosted home lab: Ubuntu servers, iptables firewalls, automated SSH hardening, Grafana and Prometheus.",
   note:
     "Over 50 personal and client projects since school; most are private or under agreements not to discuss them. Client work is described at the level the engagements allow.",
   projects: [
@@ -28,6 +28,13 @@ export const resume: ResumeData = {
       stack: "Go, Next.js, React, TypeScript, PostgreSQL",
       description:
         "Multi-role CMS web application with authentication, order management, revenue reporting, a notification system, and role-based access control.",
+    },
+    {
+      name: "Systems and networking in C/C++",
+      stack: "C, C++20, POSIX sockets, PostgreSQL, GPG, AES-256-GCM, CMake",
+      description:
+        "A multi-hop HTTP forward proxy on native sockets with layered encryption in progress, a multi-client HTTP socket server, and a terminal password manager storing secrets in PostgreSQL under a hybrid GPG + AES-256-GCM scheme.",
+      link: "https://github.com/bok1c4/HTTP-Proxy",
     },
     {
       name: "Home lab",
