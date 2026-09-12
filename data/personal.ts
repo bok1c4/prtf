@@ -21,9 +21,9 @@ export const positioning: Positioning = {
   headline: "I build platforms and ship software",
   headlineEmphasis: "with AI agents in the loop.",
   story:
-    "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box and frontend work in high school, and have spent the last two years building software for a living while finishing a Software Engineering degree.",
+    "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box and frontend work in high school, and I've been building software professionally for the past two years while finishing a Software Engineering degree.",
   summary: [
-    "I write software for a living and for fun. Two years in, most of the paid work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
+    "I write software for work and for fun. I've been building software professionally for the past two years, and most of that work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
     "AI agents are part of the everyday loop: written briefs and role prompts, Claude Code and Codex with plugins and MCP servers, and my own read of every change before it ships. I love what I do.",
   ],
   university:
