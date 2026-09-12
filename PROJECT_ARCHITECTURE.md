@@ -23,6 +23,14 @@ Everything below is from the repository README.
 
 Final project for the Internet Software Architecture course: Spring Boot 3.4 REST API (Java 21) with JWT access and refresh tokens and role-based authorization, Spring Data JPA over PostgreSQL 16, a React 18 SPA (Vite, React Router, Axios), Docker Compose, Postman collection for the API.
 
+## HTTP forward proxy (C++, public repository)
+
+From the README: a C++ HTTP forward proxy on native sockets. Phases 1 and 2 complete: an HTTP server with GET and POST handling, single-hop forwarding, and multi-hop chain routing (Proxy A → Proxy B → destination). Phase 3 in progress: AES symmetric encryption between nodes, RSA for key exchange, layered encryption and decryption at each hop.
+
+## Terminal password manager (C++20, public repository)
+
+From the README: secrets stored in PostgreSQL; each password encrypted with a fresh random AES-256 key, that key GPG-encrypted (OpenPGP) to the user's key fingerprint and stored alongside the ciphertext; new entries use AES-256-GCM (`v2` envelope), legacy AES-256-CBC rows still read; C++20 (GCC 13+ / Clang 16+), CMake, Docker Compose for the database.
+
 ## Control Management System Platform
 
 Multi-role CMS web application with authentication, order management, revenue reports, a notification system, and role-based access control (Go, Next.js, React, TypeScript, PostgreSQL). No public repository.

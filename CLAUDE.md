@@ -49,6 +49,7 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 - No numeric metrics unless the owner supplies them.
 - Client work (Fairphone on Odoo, the Rust platform under NDA) is described only at the level already on the pages; do not add internals, data, or numbers. The hero never names clients.
 - The owner never held a Linux administration job; the operations background is Hack The Box and the home lab.
+- Private repositories are never named on the site; they may inform which technologies are listed (see the scan record in `CONTENT_REVIEW.md`). Two of them (`fair-material`, `DCP`) are client code and must not be described at all.
 
 ## Resume
 

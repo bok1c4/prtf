@@ -13,6 +13,12 @@ What on the site and resume rests only on the owner's word, and what is still op
 - Off the keyboard: sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
 - Control Management System Platform (no public repository).
 - Working with stakeholders: direct communication, explaining technical terms to non-technical people, working alongside them (added at the owner's request, in the owner's terms).
+- Angular: used at the frontend developer job, in client work, and in university coursework (owner's word; no repository shows it). Laravel and the MVC work: client work and university coursework (owner's word). GitLab CI: owner's word, consistent with the GitLab MCP line.
+- The "frontend developer" timeline entry has no employer or dates; the owner has not supplied them.
+
+## Verified from the owner's repositories (2026-09-12 scan)
+
+Express, Mongoose, JWT and bcrypt, Multer, React Router, Redux Toolkit, and Vite (four 2023 full-stack apps, private); Django (a 2023 e-commerce app, private); Spring Boot and Spring Data JPA (rpg-campaign-manager, public); plain PHP MVC (barber-shop, public); TypeORM and Jest (NestJS projects); Prisma and Stripe (2024 Next.js products, private); Bash (four repos plus the hardening script); GitHub Actions (one repo); Lua (LazyConfig, public); C and C++ across 16 repos, including the public HTTP-Proxy (multi-hop forward proxy, encryption phase in progress per its README) and Password-Manager (C++20, PostgreSQL, GPG + AES-256-GCM). Not found anywhere: Vue, Svelte, .NET, GraphQL, Kubernetes, Terraform.
 
 ## Open questions
 

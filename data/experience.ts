@@ -45,6 +45,11 @@ export const timeline: TimelineEntry[] = [
   },
   {
     ref: "feat",
+    title: "frontend developer",
+    detail: "First professional work: building web frontends, Angular included.",
+  },
+  {
+    ref: "feat",
     title: "software developer",
     detail:
       "Two years of professional experience in software development. Today: Odoo modules and data systems for Fairphone, with AI agents in the loop.",
