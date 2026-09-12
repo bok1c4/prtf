@@ -34,9 +34,10 @@ export const positioning: Positioning = {
     "A good meal: pasta, or anything protein-rich.",
   ],
   workingWith: [
-    "Direct communication with stakeholders, no layer in between.",
-    "Explaining technical terms and trade-offs in plain language to non-technical people.",
-    "Working alongside the people who use the software, from the first requirement to delivery.",
+    "Requirements gathered directly from the people who use the software, then turned into a scope both sides understand.",
+    "Technical terms and trade-offs explained in plain language, so non-technical stakeholders can decide on priorities and timelines with the full picture.",
+    "Modules and features shipped end to end: built, tested, and tailored to the client's production VPS.",
+    "Alongside the stakeholders from the first requirement to delivery, so what ships matches how they actually work.",
   ],
   capabilities: [
     {
@@ -67,7 +68,7 @@ export const positioning: Positioning = {
     {
       title: "Working with stakeholders",
       detail:
-        "Direct communication, technical terms explained in plain language to non-technical people, delivery against what they actually need",
+        "Requirements gathered directly, trade-offs explained in plain language, modules and features shipped, tested, and tailored to the production VPS",
     },
   ],
   principles: [

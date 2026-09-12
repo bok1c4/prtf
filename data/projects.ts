@@ -15,7 +15,7 @@ export const caseStudies: CaseStudy[] = [
     note: "Client-owned, licensed software. What was built and what it replaced is shared; how it works inside, the data, and the numbers are not.",
     role: "Software developer",
     roleDetail:
-      "Built the Odoo modules, designed and built the data replication, and designed the architecture of the web shop, working with the Fairphone team as a contractor. Direct communication with the stakeholders throughout, with the technical side explained in plain language to non-technical colleagues.",
+      "Built the Odoo modules, designed and built the data replication, and designed the architecture of the web shop, working with the Fairphone team as a contractor. Worked directly with the stakeholders throughout: requirements from the people using the modules, technical trade-offs explained in plain language, and features shipped, tested, and tailored to the production VPS.",
     stakeholders: [
       "The colleagues whose manual tracking the modules replaced: requirements came from them directly, and they used the result day to day.",
       "Non-technical stakeholders, for whom technical terms and trade-offs were explained in plain language before decisions were made.",

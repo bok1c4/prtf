@@ -12,7 +12,7 @@ export const roles: Role[] = [
       "Built Odoo modules (Python, PostgreSQL) for sustainability and procurement operations, replacing manual, hand-kept tracking with automated workflows and reporting over large datasets.",
       "Designed and built the replication of ERP data into analytical warehouses, with reliable delivery as the core requirement.",
       "Designed the architecture of a customer-facing web shop on top of Odoo: an API gateway in front of the ERP and separate frontend services.",
-      "Worked directly with stakeholders: gathered requirements from the people doing the work, explained technical terms and trade-offs in plain language to non-technical colleagues, and delivered against what they needed.",
+      "Worked directly with stakeholders: gathered requirements from the people doing the work, explained technical trade-offs in plain language, and shipped modules and features end to end, tested and tailored to the production VPS.",
       "Work with AI agents in the delivery loop: Claude Code and Codex with per-repository instructions, role prompts, plugins, and MCP servers for pipeline and infrastructure automation.",
     ],
     note: "Client-owned, licensed software; details limited by agreement.",
