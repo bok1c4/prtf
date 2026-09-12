@@ -12,7 +12,7 @@ What on the site and resume rests only on the owner's word, and what is still op
 - "50+ personal and client projects since school", most private or under agreements.
 - Off the keyboard: sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
 - Control Management System Platform (no public repository).
-- Working with stakeholders: direct communication, explaining technical terms to non-technical people, working alongside them (added at the owner's request, in the owner's terms).
+- Working with stakeholders: requirements gathered directly, trade-offs explained in plain language, modules and features shipped end to end, tested, and tailored to the client's production VPS (owner's word, in the owner's terms).
 - Angular: used at the frontend developer job, in client work, and in university coursework (owner's word; no repository shows it). Laravel and the MVC work: client work and university coursework (owner's word). GitLab CI: owner's word, consistent with the GitLab MCP line.
 - The "frontend developer" timeline entry has no employer or dates; the owner has not supplied them.
 

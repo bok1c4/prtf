@@ -10,6 +10,7 @@ Added after a scan of the owner's own repositories (public and private; only pub
 - **Also built**: the C++ multi-hop HTTP forward proxy and the C++20 password manager (PostgreSQL, GPG + AES-256-GCM), both public repositories. The resume gains one "Systems and networking in C/C++" project line.
 - `CONTENT_REVIEW.md` records what rests on the owner's word (Angular, Laravel, GitLab CI) and what the repository scan verified.
 - Print stylesheet tightened (9.5pt body, smaller margins and section gaps) so the longer resume still fits two A4 pages.
+- "Working with people" rewritten: requirements gathered directly, trade-offs explained in plain language, modules and features shipped end to end (built, tested, tailored to the production VPS), alongside the stakeholders through delivery. The hero bullet, the Fairphone page, and the resume bullet say the same thing.
 
 ## 2026-09-12: terminal-workspace portfolio (branch `feat/terminal-redesign`)
 
