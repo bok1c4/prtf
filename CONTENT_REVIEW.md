@@ -12,6 +12,7 @@ What on the site and resume rests only on the owner's word, and what is still op
 - "50+ personal and client projects since school", most private or under agreements.
 - Off the keyboard: sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
 - Control Management System Platform (no public repository).
+- Working with stakeholders: direct communication, explaining technical terms to non-technical people, working alongside them (added at the owner's request, in the owner's terms).
 
 ## Open questions
 

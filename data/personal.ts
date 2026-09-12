@@ -33,6 +33,11 @@ export const positioning: Positioning = {
     "The gym, trying to stay in shape.",
     "A good meal: pasta, or anything protein-rich.",
   ],
+  workingWith: [
+    "Direct communication with stakeholders, no layer in between.",
+    "Explaining technical terms and trade-offs in plain language to non-technical people.",
+    "Working alongside the people who use the software, from the first requirement to delivery.",
+  ],
   capabilities: [
     {
       title: "Backend services and APIs",
@@ -57,6 +62,11 @@ export const positioning: Positioning = {
     {
       title: "Linux and self-hosting",
       detail: "Ubuntu servers, iptables firewalls, SSH hardening, monitoring, Docker Compose",
+    },
+    {
+      title: "Working with stakeholders",
+      detail:
+        "Direct communication, technical terms explained in plain language to non-technical people, delivery against what they actually need",
     },
   ],
   principles: [

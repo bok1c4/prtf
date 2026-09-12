@@ -36,6 +36,7 @@ export interface Positioning {
   summary: string[];
   university: string;
   person: string[];
+  workingWith: string[];
   capabilities: Capability[];
   principles: Principle[];
   currently: Fact[];
