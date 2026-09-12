@@ -5,7 +5,7 @@ export const resume: ResumeData = {
   label: "Download resume",
   headline: "Software Developer · backend-focused full-stack",
   summary:
-    "Software developer building platforms and shipping software with AI agents in the loop. Two years of professional experience, backend-focused full-stack: Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js frontends. Finishing a BSc in Software Engineering (2023 – 2027). Runs a self-hosted home lab: Ubuntu servers, iptables firewalls, automated SSH hardening, Grafana and Prometheus.",
+    "Software developer building platforms and shipping software with AI agents in the loop. Two years of professional experience in software development, backend-focused full-stack: Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js frontends. Finishing a BSc in Software Engineering (2023 – 2027). Runs a self-hosted home lab: Ubuntu servers, iptables firewalls, automated SSH hardening, Grafana and Prometheus.",
   note:
     "Over 50 personal and client projects since school; most are private or under agreements not to discuss them. Client work is described at the level the engagements allow.",
   projects: [

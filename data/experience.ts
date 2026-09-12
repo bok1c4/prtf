@@ -47,7 +47,7 @@ export const timeline: TimelineEntry[] = [
     ref: "feat",
     title: "software developer",
     detail:
-      "Two years of building software for a living. Today: Odoo modules and data systems for Fairphone, with AI agents in the loop.",
+      "Two years of professional experience in software development. Today: Odoo modules and data systems for Fairphone, with AI agents in the loop.",
   },
 ];
 
