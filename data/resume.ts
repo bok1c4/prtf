@@ -3,7 +3,7 @@ import type { ResumeData } from "@/types";
 export const resume: ResumeData = {
   url: "/resume.pdf",
   label: "Download resume",
-  headline: "Software Developer · backend-focused full-stack · AI agents in the loop",
+  headline: "Software Developer · backend-focused full-stack",
   summary:
     "Software developer building platforms and shipping software with AI agents in the loop. Two years of professional experience, backend-focused full-stack: Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js frontends. Finishing a BSc in Software Engineering (2023 – 2027). Runs a self-hosted home lab: Ubuntu servers, iptables firewalls, automated SSH hardening, Grafana and Prometheus.",
   note:
