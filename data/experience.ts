@@ -7,13 +7,12 @@ export const roles: Role[] = [
     title: "Software Developer",
     period: "2025 – Present",
     summary:
-      "Odoo modules and data systems for supply-chain and sustainability operations.",
+      "Data-heavy ERP engineering for supply-chain and sustainability operations.",
     highlights: [
       "Built Odoo modules (Python, PostgreSQL) for sustainability and procurement operations, replacing manual, hand-kept tracking with automated workflows and reporting over large datasets.",
       "Designed and built the replication of ERP data into analytical warehouses, with reliable delivery as the core requirement.",
       "Designed the architecture of a customer-facing web shop on top of Odoo: an API gateway in front of the ERP and separate frontend services.",
       "Worked directly with stakeholders: gathered requirements from the people doing the work, explained technical trade-offs in plain language, and shipped modules and features end to end, tested and tailored to the production VPS.",
-      "Work with AI agents in the delivery loop: Claude Code and Codex with per-repository instructions, role prompts, plugins, and MCP servers for pipeline and infrastructure automation.",
     ],
     note: "Client-owned, licensed software; details limited by agreement.",
   },
@@ -36,7 +35,7 @@ export const timeline: TimelineEntry[] = [
     ref: "feat",
     title: "hack the box, high school",
     detail:
-      "Hack The Box is where Linux, Git, Nmap, and Kali Linux really came from. Same years: custom frontends in HTML, CSS, and JavaScript, then React.",
+      "Hack The Box is where Linux, Git, Nmap, and Kali Linux really came from. Same years: C# and .NET systems, and custom frontends in HTML, CSS, and JavaScript, then React.",
   },
   {
     ref: "feat",
@@ -46,13 +45,20 @@ export const timeline: TimelineEntry[] = [
   {
     ref: "feat",
     title: "frontend developer",
-    detail: "First professional work: building web frontends, Angular included.",
+    detail:
+      "First year of professional work: frontend only, building web frontends, Angular included.",
+  },
+  {
+    ref: "feat",
+    title: "backend servers",
+    detail:
+      "Got introduced to backend servers while the paid work was still frontend websites.",
   },
   {
     ref: "feat",
     title: "software developer",
     detail:
-      "Two years of professional experience in software development. Today: Odoo modules and data systems for Fairphone, with AI agents in the loop.",
+      "Frontend and backend at once since then: full stack. Four years of professional experience in software development. Today: Odoo modules and data systems for Fairphone, with AI as a daily pair.",
   },
 ];
 

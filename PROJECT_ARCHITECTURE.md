@@ -37,4 +37,4 @@ Multi-role CMS web application with authentication, order management, revenue re
 
 ## Home lab
 
-Self-hosted Ubuntu servers with a Forgejo git forge; home network and custom iptables firewall rules; SSH hardening automated end to end with the owner's own script; Grafana and Prometheus monitoring; local blockchains for experiments. Origins: Hack The Box (Linux, Git, Nmap, Kali Linux).
+Self-hosted Ubuntu servers with a Forgejo git forge; home network and custom iptables firewall rules; SSH hardening automated end to end with the owner's own script; Grafana and Prometheus monitoring; local blockchains for experiments; locally hosted VMs for privacy and security work (Qubes OS, Whonix, Tor and onion services); self-hosted chats and servers for anonymous communication (onion services on Tor, garlic-routed services on I2P); penetration testing with red and blue team practice against the owner's own lab. Origins: Hack The Box (Linux, Git, Nmap, Kali Linux).

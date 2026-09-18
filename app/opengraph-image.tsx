@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { personal, positioning, SITE } from "@/data";
 
-export const alt = `${SITE.name}: software developer building the data systems behind supply chains and sustainability reporting, with AI agents in the loop`;
+export const alt = `${SITE.name}: software developer building the data systems behind supply chains and sustainability reporting, with AI as a daily pair`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

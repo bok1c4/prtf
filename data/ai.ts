@@ -2,7 +2,7 @@ import type { AiWorkflow } from "@/types";
 
 export const aiWorkflow: AiWorkflow = {
   intro:
-    "AI is part of how I ship software, not an autocomplete on the side. Tools come and go; the loop stays: brief, plan, build with tests, review, verify, document. The agent gets the same context a new teammate would, written down in the repository.",
+    "AI is how I build now, and I enjoy the craft more because of it. Not autocomplete on the side: an agent in the terminal all day, briefed like a teammate. The loop stays the same whether the codebase is years old or an empty directory: brief, plan, build with tests, review, verify, document. The agent gets the same context a new colleague would, written down in the repository.",
   loop: [
     {
       step: "brief",
@@ -49,37 +49,33 @@ export const aiWorkflow: AiWorkflow = {
   },
   claudeCode: {
     summary:
-      "Claude Code is the daily driver, configured per repository rather than per chat.",
+      "A daily pair, not a chat window. Every repository carries its own setup, so a session starts knowing the project instead of asking about it.",
     items: [
       {
-        name: "CLAUDE.md per repo",
+        name: "a codebase I'm new to",
         detail:
-          "Stack, commands, architecture, content rules, and the inventory of tools the agent can use.",
+          "The first session is orientation: the agent reads the repository and writes down what it learned (stack, commands, architecture, rules), so every session after starts productive.",
       },
       {
-        name: "superpowers plugin",
+        name: "from the ground up",
         detail:
-          "brainstorming, writing-plans, test-driven-development, systematic-debugging, verification-before-completion.",
+          "Brainstorm before code: goals, constraints, and trade-offs argued out with the agent, a plan written and committed next to the code, then small tasks with tests first.",
       },
       {
-        name: "engineering plugin",
+        name: "the everyday",
         detail:
-          "code review, debugging, architecture decision records, deploy checklists, and the MCP connectors it ships with.",
-      },
-      {
-        name: "qodo-standards plugin",
-        detail: "Managed coding rules loaded into the session before code is written.",
+          "Features, fixes, debugging, and reviews run the same loop, with planning, review, and verification checklists so quality does not depend on the day.",
       },
       {
         name: "memory and specs",
         detail:
-          "Persistent memory files plus written specs and plans committed next to the code.",
+          "Persistent memory files plus written specs and plans committed next to the code, so the next session, human or agent, picks up where the last one stopped.",
       },
     ],
   },
   mcp: {
     summary:
-      "MCP servers give the agent real tools instead of pasted output. Which servers and tools exist is declared in the project config, so the agent knows exactly what it can call.",
+      "The agent does not just write code, it acts. MCP servers give it real tools instead of pasted output, declared per project so it knows exactly what it can call.",
     items: [
       {
         name: "GitLab",

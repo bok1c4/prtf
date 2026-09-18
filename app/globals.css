@@ -348,13 +348,14 @@
 
 @page {
   size: A4;
-  margin: 10mm 12mm;
+  margin: 8mm 11mm;
 }
 
 /* Print rules sit outside every @layer on purpose: unlayered styles win
    over Tailwind's layered utilities, so the pt sizes below override the
-   px sizes used on screen and keep the resume on two A4 pages. */
+   px sizes used on screen and keep the resume on one A4 page. */
 @media print {
+  html,
   body {
     background: #ffffff !important;
     color: #17171a !important;
@@ -372,43 +373,43 @@
     --gb-yellow: #7a4f00;
     --gb-aqua: #1f5f45;
     font-family: ui-sans-serif, system-ui, Arial, sans-serif;
-    font-size: 9.5pt;
-    line-height: 1.32;
+    font-size: 8.6pt;
+    line-height: 1.25;
     background: #ffffff;
     color: #17171a;
   }
   .resume h1 {
-    font-size: 16pt;
+    font-size: 14pt;
     line-height: 1.15;
   }
   .resume header p {
-    font-size: 9.5pt;
-    margin-top: 0.15rem;
+    font-size: 8.6pt;
+    margin-top: 0.1rem;
   }
   .resume h2 {
-    margin: 0.65rem 0 0.3rem;
-    font-size: 7.5pt;
-    padding-bottom: 0.2rem;
+    margin: 0.45rem 0 0.2rem;
+    font-size: 6.8pt;
+    padding-bottom: 0.12rem;
   }
   .resume h3 {
-    font-size: 10pt;
+    font-size: 9pt;
   }
   .resume p,
   .resume li,
   .resume dt,
   .resume dd {
-    font-size: 9.5pt;
-    line-height: 1.32;
+    font-size: 8.6pt;
+    line-height: 1.25;
   }
   .resume section > p,
   .resume article > p {
-    margin-top: 0.15rem;
+    margin-top: 0.1rem;
   }
   .resume article {
-    margin-top: 0.4rem;
+    margin-top: 0.25rem;
   }
   .resume li {
-    margin-top: 0.08rem;
+    margin-top: 0.04rem;
   }
   a {
     color: inherit;
