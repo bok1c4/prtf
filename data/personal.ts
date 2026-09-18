@@ -23,7 +23,7 @@ export const positioning: Positioning = {
   story:
     "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box, C#/.NET systems, and frontend work in high school, and I've spent the past four years going from frontend-only work to full-stack platforms while finishing a Software Engineering degree.",
   summary: [
-    "I write software for work and for fun. I've been building software professionally for the past four years: the first year frontend only, then backend servers came in alongside the frontend websites, and now it's both at once, full stack. Most of the recent work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
+    "I write software for work and for fun. Four years of professional work: started on the frontend, followed the requests into the backend, now the full stack, backend first. Most of the recent work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
     "AI is my daily pair: I brief it like a teammate, plan with it before code, and read every change before it ships. The craft got faster without getting less mine. I love what I do.",
   ],
   university:
