@@ -4,10 +4,11 @@ What on the site and resume rests only on the owner's word, and what is still op
 
 ## Stated by the owner, not verifiable from public sources
 
-- Two years of professional experience; the listed contract role starts in 2025.
+- Four years of professional experience (owner's statement, 2026-09-18; first stated as three, corrected to four the same day): the first year frontend only, then backend servers alongside frontend websites, then both at once, full stack. The listed contract role starts in 2025.
+- C# and .NET: systems work in high school (owner's statement, 2026-09-18; no repository shows it, see the scan record below).
 - BSc Software Engineering: enrolled 2023, finishing by the end of 2027.
 - Client work for Fairphone: Odoo modules for sustainability and procurement operations that replaced manual tracking, replication of ERP data into analytical warehouses, and the architecture of a customer-facing web shop. Licensed and under agreement; described only at that level.
-- Home lab: Ubuntu servers, Forgejo, iptables firewall, automated SSH hardening script, Grafana and Prometheus, local blockchains. Origins in Hack The Box.
+- Home lab: Ubuntu servers, Forgejo, iptables firewall, automated SSH hardening script, Grafana and Prometheus, local blockchains. Origins in Hack The Box. Locally hosted VMs for privacy and security work (Qubes OS, Whonix, Tor and onion services), self-hosted chats and servers for anonymous communication (onion services on Tor, garlic-routed I2P), and penetration testing with red and blue team practice against the lab (owner's statement, 2026-09-18).
 - AI workflow: Claude Code and Codex; superpowers, engineering, and qodo-standards plugins (present in the owner's environment); MCP servers for GitLab pipeline automation and cloud infrastructure; the tracker connectors and browser from the engineering plugin.
 - "50+ personal and client projects since school", most private or under agreements.
 - Off the keyboard: sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
@@ -22,10 +23,9 @@ Express, Mongoose, JWT and bcrypt, Multer, React Router, Redux Toolkit, and Vite
 
 ## Open questions
 
-1. The contract role period (2025 – present) is shorter than "two years of professional experience". Add the earlier role, or change the wording, whichever is accurate.
-2. Confirm the contract allows naming Fairphone on the site and resume.
-3. Which plugins and MCP servers to keep in the AI section; remove any not actually in use.
-4. Regenerate `public/resume.pdf` from `/resume` after review; the checked-in PDF predates the redesign.
+1. Confirm the contract allows naming Fairphone on the site and resume.
+2. Which plugins (now in the skills group) and MCP servers (AI section) to keep; remove any not actually in use.
+3. The "frontend developer" and "backend servers" timeline entries have no employer or dates; supply them if the earlier work should appear as a role on the resume.
 
 ## Deliberately not on the site
 

@@ -19,12 +19,12 @@ export const personal: PersonalInfo = {
 export const positioning: Positioning = {
   eyebrow: "Software developer · Belgrade, Serbia",
   headline: "I build platforms and ship software",
-  headlineEmphasis: "with AI agents in the loop.",
+  headlineEmphasis: "with AI as my daily pair.",
   story:
-    "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box and frontend work in high school, and I've been building software professionally for the past two years while finishing a Software Engineering degree.",
+    "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box, C#/.NET systems, and frontend work in high school, and I've spent the past four years going from frontend-only work to full-stack platforms while finishing a Software Engineering degree.",
   summary: [
-    "I write software for work and for fun. I've been building software professionally for the past two years, and most of that work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
-    "AI agents are part of the everyday loop: written briefs and role prompts, Claude Code and Codex with plugins and MCP servers, and my own read of every change before it ships. I love what I do.",
+    "I write software for work and for fun. I've been building software professionally for the past four years: the first year frontend only, then backend servers came in alongside the frontend websites, and now it's both at once, full stack. Most of the recent work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
+    "AI is my daily pair: I brief it like a teammate, plan with it before code, and read every change before it ships. The craft got faster without getting less mine. I love what I do.",
   ],
   university:
     "BSc Software Engineering. Enrolled in 2023, finishing by the end of 2027, working as a software developer alongside it.",
@@ -54,7 +54,7 @@ export const positioning: Positioning = {
     },
     {
       title: "AI-assisted engineering",
-      detail: "Claude Code, role prompts, plugins, MCP servers for pipelines and infrastructure",
+      detail: "briefs, plans, and reviews with an agent daily; MCP tools acting on pipelines and infrastructure",
     },
     {
       title: "Full-stack delivery",
@@ -93,7 +93,7 @@ export const positioning: Positioning = {
         "Layers and services that can be understood, tested, and changed on their own.",
     },
     {
-      title: "AI in the loop, developer accountable",
+      title: "AI writes, I answer for it",
       detail:
         "Agents work from written briefs and rules; every change is read, understood, and verified by me.",
     },
@@ -109,5 +109,5 @@ export const positioning: Positioning = {
     { label: "degree", value: "BSc Software Engineering, 2023 – 2027" },
   ],
   short:
-    "Software Developer · Backend-focused full-stack · Go, Python, Rust, TypeScript, PostgreSQL, Odoo. Two years of professional work, final year of a Software Engineering degree, AI agents (Claude Code, Codex, MCP tools) in the loop.",
+    "Software Developer · Backend-focused full-stack · Go, Python, Rust, TypeScript, PostgreSQL, Odoo. Four years of professional work, final year of a Software Engineering degree, AI (Claude Code, Codex, MCP tools) as a daily pair.",
 };

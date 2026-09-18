@@ -210,12 +210,12 @@ function catFile(name: string): { out: string[]; err?: boolean; nav?: string } {
           "## prompting",
           ...aiWorkflow.prompting.practices.map((item) => `  - ${item}`),
           "",
-          "## claude code",
+          "## day to day",
           ...aiWorkflow.claudeCode.items.map(
             (item) => `  - ${item.name}: ${item.detail}`,
           ),
           "",
-          "## mcp servers",
+          "## real systems",
           ...aiWorkflow.mcp.items.map((item) => `  - ${item.name}: ${item.detail}`),
         ],
       };

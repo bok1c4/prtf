@@ -45,15 +45,18 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 
 ## Content rules
 
-- Every fact must trace to `data/`, the public GitHub repositories, or the owner's confirmation. `CONTENT_REVIEW.md` lists what is unverified; do not turn an open question into a claim.
+- Every fact must trace to `data/`, the public GitHub repositories, or the owner's confirmation. `CONTENT_REVIEW.md` lists what is unverified; do not turn an open question into a claim. `PROJECT_ARCHITECTURE.md` records what may be said about each case-study system and where it came from.
 - No numeric metrics unless the owner supplies them.
 - Client work (Fairphone on Odoo, the Rust platform under NDA) is described only at the level already on the pages; do not add internals, data, or numbers. The hero never names clients.
 - The owner never held a Linux administration job; the operations background is Hack The Box and the home lab.
 - Private repositories are never named on the site; they may inform which technologies are listed (see the scan record in `CONTENT_REVIEW.md`). Two of them (`fair-material`, `DCP`) are client code and must not be described at all.
+- Copy style: no em dashes anywhere; use colons, commas, or "·" instead. Keep copy lean, no filler.
+- No self-repetition: a resume project description never repeats tool names from its stack line (tools in the stack line, capabilities in the description), and adjacent copy (summary vs headline, intro vs list rows, sibling rows) must not restate each other.
+- Do not reintroduce phrases the owner removed: "multi-agent pipelines", "Human-in-the-Loop Review", "AI-Assisted Development", "Context Engineering" ("AI-assisted engineering" as a section title is fine). Make the AI-in-the-loop point at most once per page or document.
 
 ## Resume
 
-`/resume` renders from `data/` with print styles (A4, navigation hidden). `public/resume.pdf` is generated from that route with headless Chrome (command in `README.md`); regenerate it after any content change. `ResumeButton` links to `/resume` and to `resume.url` (`/resume.pdf`).
+`/resume` renders from `data/` with print styles (A4, navigation hidden). The printed resume must fit one A4 page; the print CSS in `app/globals.css` is sized for that, so check the page count after any content change. `public/resume.pdf` is generated from that route with headless Chrome (command in `README.md`); regenerate it after any content change. `ResumeButton` links to `/resume` and to `resume.url` (`/resume.pdf`).
 
 ## Docker
 

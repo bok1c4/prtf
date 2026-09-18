@@ -17,6 +17,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "JavaScript" },
       { name: "PHP", note: "Laravel, plain PHP MVC" },
       { name: "Java", note: "Spring Boot" },
+      { name: "C#", note: ".NET, high school systems work" },
     ],
   },
   {
@@ -115,6 +116,7 @@ export const skillGroups: SkillGroup[] = [
     usage:
       "Hack The Box is where this started; the home lab is where it is applied. Networking from the socket up in C and C++: a multi-client HTTP server, and a multi-hop HTTP forward proxy with layered encryption in progress.",
     primary: [
+      { name: "Penetration testing" },
       { name: "iptables firewalls" },
       { name: "SSH hardening (automated)" },
       { name: "Socket programming (C/C++)" },
@@ -122,6 +124,11 @@ export const skillGroups: SkillGroup[] = [
       { name: "Kali Linux" },
     ],
     secondary: [
+      { name: "Red and blue team practice" },
+      { name: "Qubes OS" },
+      { name: "Whonix" },
+      { name: "Tor and onion services" },
+      { name: "I2P (garlic routing)" },
       { name: "HTTP servers and proxies from scratch" },
       { name: "PGP handling" },
       { name: "Data encryption (AES-256-GCM, GPG)" },
@@ -144,7 +151,7 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "AI-assisted workflow",
     usage:
-      "Agents in the delivery loop: Claude Code and Codex configured per repository, role prompts and agent instruction files, plugins for planning and review, and MCP servers so the agent can act on pipelines and infrastructure.",
+      "An agent in every repository: briefed from files committed next to the code, planning before code, reviewing before merge, and acting on pipelines and infrastructure through MCP.",
     primary: [
       { name: "Claude Code" },
       { name: "Codex" },

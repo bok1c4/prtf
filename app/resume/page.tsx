@@ -6,7 +6,6 @@ import PrintButton from "@/components/PrintButton";
 import {
   education,
   personal,
-  positioning,
   resume,
   roles,
   SITE,
@@ -17,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Resume of Boris Nikolic, software developer: backend-focused full-stack, Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js, AI agents in the loop.",
+    "Resume of Boris Nikolic, software developer: backend-focused full-stack, Odoo modules and data systems on PostgreSQL, Go and Python services, React and Next.js, AI as a daily pair.",
   alternates: { canonical: "/resume" },
 };
 
@@ -71,18 +70,6 @@ export default function ResumePage() {
         <section aria-labelledby="resume-summary">
           <h2 id="resume-summary">Summary</h2>
           <p className="text-[14px] leading-relaxed text-ink-2">{resume.summary}</p>
-        </section>
-
-        <section aria-labelledby="resume-competencies">
-          <h2 id="resume-competencies">Core competencies</h2>
-          <ul className="text-[14px] leading-relaxed text-ink-2 sm:columns-2 sm:gap-8 print:columns-2">
-            {positioning.capabilities.map((capability) => (
-              <li key={capability.title} className="break-inside-avoid">
-                <strong className="font-bold text-ink">{capability.title}:</strong>{" "}
-                {capability.detail}
-              </li>
-            ))}
-          </ul>
         </section>
 
         <section aria-labelledby="resume-experience">
@@ -146,7 +133,9 @@ export default function ResumePage() {
             <strong className="font-bold text-ink">{education.degree}</strong> ·{" "}
             {education.status}
           </p>
-          <p className="mt-2 text-[13px] leading-relaxed text-muted">Path: {path}.</p>
+          <p className="mt-2 text-[13px] leading-relaxed text-muted print:hidden">
+            Path: {path}.
+          </p>
         </section>
       </article>
 

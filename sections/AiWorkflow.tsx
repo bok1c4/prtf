@@ -93,10 +93,10 @@ export default function AiWorkflow() {
       </div>
 
       <div className="mt-4 grid gap-4 md:grid-cols-3">
-        <SubPane title="claude code" summary={aiWorkflow.claudeCode.summary}>
+        <SubPane title="day to day" summary={aiWorkflow.claudeCode.summary}>
           <ItemList items={aiWorkflow.claudeCode.items} />
         </SubPane>
-        <SubPane title="mcp servers" summary={aiWorkflow.mcp.summary}>
+        <SubPane title="real systems" summary={aiWorkflow.mcp.summary}>
           <ItemList items={aiWorkflow.mcp.items} />
         </SubPane>
         <SubPane
