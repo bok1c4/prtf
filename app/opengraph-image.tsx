@@ -54,7 +54,7 @@ export default async function OpenGraphImage() {
           >
             [prtf]
           </div>
-          <div style={{ display: "flex", color: "#d5c4a1" }}>0:home 1:ai 2:work 3:skills</div>
+          <div style={{ display: "flex", color: "#d5c4a1" }}>0:home 1:work 2:exp 3:skills</div>
           <div style={{ display: "flex", marginLeft: "auto", color: "#a89984" }}>
             {personal.handle}
           </div>

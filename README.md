@@ -12,7 +12,7 @@ Keyboard chords (`components/KeyboardNav.tsx`): `g` then `h/a/w/l/s/e/c/r` jumps
 
 | Route | Purpose |
 |---|---|
-| `/` | Home: hero, selected work, about, capabilities, experience, contact |
+| `/` | Home: hero with the shell, case studies, story, skills, AI workflow, home lab, about, contact |
 | `/work/[slug]` | Two work pages (`fairphone-odoo-platform`, `toy-store`) |
 | `/resume` | Print-optimized, ATS-friendly resume rendered from `data/` |
 | `/resume.pdf` | Static PDF, regenerated from `/resume` (see below) |

@@ -3,11 +3,11 @@ import { personal } from "@/data";
 
 export const windows = [
   { href: "/", label: "home", key: "h" },
-  { href: "/#ai", label: "ai", key: "a" },
   { href: "/#work", label: "work", key: "w" },
-  { href: "/#homelab", label: "lab", key: "l" },
-  { href: "/#capabilities", label: "skills", key: "s" },
   { href: "/#experience", label: "exp", key: "e" },
+  { href: "/#capabilities", label: "skills", key: "s" },
+  { href: "/#ai", label: "ai", key: "a" },
+  { href: "/#homelab", label: "lab", key: "l" },
   { href: "/#contact", label: "contact", key: "c" },
 ];
 
