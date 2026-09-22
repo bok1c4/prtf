@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-22: home page order
+
+The work first, then how it gets done. New order: hero, case studies, story, skills, AI workflow, home lab, about, contact. Before, the AI workflow sat directly under the hero and the case studies came third, which front-loaded the page with process before a visitor had seen any work. The tab bar, the `?` help dialog, and the Open Graph image follow the new order; section ids and keyboard chords are unchanged.
+
 ## 2026-09-18: four years, C#/.NET, warmer AI copy, one-page resume
 
 - **Experience**: four years of professional experience (owner's statement, first stated as three, corrected to four the same day): the first year frontend only, then backend servers alongside frontend websites, then both at once, full stack. The story gains a "backend servers" commit between "frontend developer" and "software developer"; every "two years" line updated.

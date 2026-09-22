@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 
 const chords: Record<string, { target: string; label: string }> = {
   h: { target: "/", label: "home" },
-  a: { target: "/#ai", label: "ai workflow" },
   w: { target: "/#work", label: "work" },
-  l: { target: "/#homelab", label: "home lab" },
-  s: { target: "/#capabilities", label: "skills" },
   e: { target: "/#experience", label: "experience" },
+  s: { target: "/#capabilities", label: "skills" },
+  a: { target: "/#ai", label: "ai workflow" },
+  l: { target: "/#homelab", label: "home lab" },
   c: { target: "/#contact", label: "contact" },
   r: { target: "/resume", label: "resume" },
 };
