@@ -22,7 +22,7 @@ export const roles: Role[] = [
     period: "2024",
     meta: "Belgrade",
     highlights: [
-      "Moved from frontend into backend: built Node.js/Express servers and REST APIs with auth and PostgreSQL, plus the React frontends consuming them.",
+      "Moved from frontend into backend: built NestJS servers and REST APIs with auth and PostgreSQL, plus the React frontends consuming them.",
     ],
   },
   {

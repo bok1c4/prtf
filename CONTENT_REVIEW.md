@@ -9,6 +9,7 @@ Source of truth since 2026-09-23: the owner's CV (`public/Boris_Nikolic_CV.pdf`,
 - Working knowledge of Java (Spring Boot) and PHP (Laravel); Angular; GitLab CI; motion & graphic design.
 - The Order & revenue management platform (Go, Next.js, TypeScript, PostgreSQL) has no public repository.
 - The 2023 internship also included contributing to C# codebases on .NET in a Windows environment (owner's statement, 2026-09-23; not on the CV PDF, shown on the site and /resume). C# (.NET) is also listed under Languages as working knowledge on the owner's request the same day.
+- The 2024 backend work is described as NestJS (owner's statement, 2026-09-23: NestJS was the primary framework, on Node.js with Express); the CV text before that said Node.js/Express. The Backend skill item reads "NestJS (Node.js, Express)".
 - BSc Software Engineering, Singidunum University, Belgrade, expected 2027.
 - Availability (owner's statements, 2026-09-23): backend, full-stack, or DevOps roles; full-time, or part-time with flexible working hours; remote friendly (CET); B2B contractor or employee; open to relocation within Europe for hybrid roles with a couple of office days a week (the owner named Switzerland, the Netherlands, and Slovenia as examples; the site says only within Europe). The DevOps sentence in the summary (deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring) is the owner's wording too. The site, /resume, and the generated CV PDF carry the same lines.
 
