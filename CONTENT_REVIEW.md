@@ -10,7 +10,7 @@ Source of truth since 2026-09-23: the owner's CV (`public/Boris_Nikolic_CV.pdf`,
 - The Order & revenue management platform (Go, Next.js, TypeScript, PostgreSQL) has no public repository.
 - The 2023 internship also included contributing to C# codebases on .NET in a Windows environment (owner's statement, 2026-09-23; not on the CV PDF, shown on the site and /resume). C# (.NET) is also listed under Languages as working knowledge on the owner's request the same day.
 - BSc Software Engineering, Singidunum University, Belgrade, expected 2027.
-- Open to remote (CET); available as a B2B contractor or an employee. Backend, full-stack, or DevOps roles, and the DevOps sentence in the summary (deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring): owner On 2026-09-23 the owner added: looking for full-time or part-time roles with flexible working hours, remote friendly. The site and /resume carry that longer line; the CV PDF still has the shorter one.
+- Availability (owner's statements, 2026-09-23): backend, full-stack, or DevOps roles; full-time, or part-time with flexible working hours; remote friendly (CET); B2B contractor or employee; open to relocation within Europe for hybrid roles with a couple of office days a week (the owner named Switzerland, the Netherlands, and Slovenia as examples; the site says only within Europe). The DevOps sentence in the summary (deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring) is the owner's wording too. The site, /resume, and the generated CV PDF carry the same lines.
 
 ## From the owner's earlier statements, kept because the CV does not contradict them
 

@@ -13,7 +13,7 @@ export default function Contact() {
             id="contact-title"
             command="cat contact.md"
             title="Open to new roles and projects"
-            lede="Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours, remote friendly (CET), as a B2B contractor or an employee. Email is the fastest way to reach me."
+            lede="Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours, remote friendly (CET), as a B2B contractor or an employee. Open to relocation within Europe for hybrid roles with a couple of office days a week. Email is the fastest way to reach me."
             className="mb-4"
           />
           <a
