@@ -22,7 +22,7 @@ export const skillGroups: SkillGroup[] = [
     primary: [
       { name: "Odoo module development" },
       { name: "Go (Gin, chi)" },
-      { name: "Node.js (Express, NestJS)" },
+      { name: "NestJS (Node.js, Express)" },
       { name: "REST API design" },
       { name: "JWT auth & RBAC" },
       { name: "Stripe" },
