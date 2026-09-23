@@ -20,7 +20,7 @@ export const positioning: Positioning = {
   taglineLead: "Software Developer",
   taglineFocus: "Backend-focused Full-Stack (Python, Go, PostgreSQL, React)",
   subline:
-    "Based in Belgrade, Serbia · Remote friendly (CET) · Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours · B2B contractor or employee",
+    "Based in Belgrade, Serbia · Remote friendly (CET) · Open to relocation within Europe · Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours · B2B contractor or employee",
   highlights: [
     "Odoo/ERP modules and data pipelines in Python and PostgreSQL for Fairphone (2025 – present)",
     "Node.js/Express and Go services, with the React and Next.js frontends that consume them",
@@ -78,7 +78,7 @@ export const positioning: Positioning = {
   ],
   currently: [
     { label: "role", value: "Software Developer" },
-    { label: "open to", value: "Backend, full-stack, or DevOps · full-time or part-time, flexible hours · remote friendly (CET) · B2B contractor or employee" },
+    { label: "open to", value: "Backend, full-stack, or DevOps · full-time or part-time, flexible hours · remote friendly (CET) · relocation within Europe for hybrid roles · B2B contractor or employee" },
     { label: "based", value: "Belgrade, Serbia" },
     {
       label: "degree",

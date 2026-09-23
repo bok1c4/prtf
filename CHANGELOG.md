@@ -15,6 +15,7 @@ The owner's CV (`public/Boris_Nikolic_CV.pdf`) is now the source of truth; the s
 - **AI section** kept, with the "daily pair" phrasing, plugin names, and the tools pane removed; its `/resume` counterpart is the Skills line only.
 - **Removed**: `public/resume.pdf` (the generated PDF; the CV file replaces it), `app/work/[slug]`, `components/casestudy/*`, `components/diagrams/*`.
 - **Follow-ups the same day**: the CV PDF is generated from `/resume` again (one A4 page) so the download matches the site, replacing the owner's designed PDF on request; the 2023 employer reads "High school partner company"; the summary's second sentence and the hero's third bullet describe the DevOps side with security in mind (hardened Linux servers, Docker, CI/CD pipelines, monitoring) instead of C/C++ systems code, which stays under Projects and Skills. The DevOps sentence includes deploying and managing services, and every availability line names backend, full-stack, or DevOps roles.
+- **Relocation** (owner's request the same day): the hero sub-line and the CV header add "Open to relocation within Europe"; the contact lede and the shell's `open to` fact say it is for hybrid roles with a couple of office days a week. The CV PDF is regenerated.
 
 ## 2026-09-22: home page order
 
