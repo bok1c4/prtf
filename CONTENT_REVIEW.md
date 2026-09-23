@@ -1,40 +1,42 @@
 # Content Review
 
-What on the site and resume rests only on the owner's word, and what is still open. Everything else traces to the repository, the public GitHub repositories, or the owner's explicit statements in the redesign sessions.
+Source of truth since 2026-09-23: the owner's CV (`public/Boris_Nikolic_CV.pdf`, one A4 page) plus the owner's instructions for this update. Everything on the site traces to one of those, to a public GitHub repository, or to an earlier explicit statement by the owner that the CV does not contradict.
 
-## Stated by the owner, not verifiable from public sources
+## From the CV, not verifiable from public sources
 
-- Four years of professional experience (owner's statement, 2026-09-18; first stated as three, corrected to four the same day): the first year frontend only, then backend servers alongside frontend websites, then both at once, full stack. The listed contract role starts in 2025.
-- C# and .NET: systems work in high school (owner's statement, 2026-09-18; no repository shows it, see the scan record below).
-- BSc Software Engineering: enrolled 2023, finishing by the end of 2027.
-- Client work for Fairphone: Odoo modules for sustainability and procurement operations that replaced manual tracking, replication of ERP data into analytical warehouses, and the architecture of a customer-facing web shop. Licensed and under agreement; described only at that level.
-- Home lab: Ubuntu servers, Forgejo, iptables firewall, automated SSH hardening script, Grafana and Prometheus, local blockchains. Origins in Hack The Box. Locally hosted VMs for privacy and security work (Qubes OS, Whonix, Tor and onion services), self-hosted chats and servers for anonymous communication (onion services on Tor, garlic-routed I2P), and penetration testing with red and blue team practice against the lab (owner's statement, 2026-09-18).
-- AI workflow: Claude Code and Codex; superpowers, engineering, and qodo-standards plugins (present in the owner's environment); MCP servers for GitLab pipeline automation and cloud infrastructure; the tracker connectors and browser from the engineering plugin.
-- "50+ personal and client projects since school", most private or under agreements.
-- Off the keyboard: sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
-- Control Management System Platform (no public repository).
-- Working with stakeholders: requirements gathered directly, trade-offs explained in plain language, modules and features shipped end to end, tested, and tailored to the client's production VPS (owner's word, in the owner's terms).
-- Angular: used at the frontend developer job, in client work, and in university coursework (owner's word; no repository shows it). Laravel and the MVC work: client work and university coursework (owner's word). GitLab CI: owner's word, consistent with the GitLab MCP line.
-- The "frontend developer" timeline entry has no employer or dates; the owner has not supplied them.
+- Four years of hands-on web development: web development intern (school programme, Zaječar, 2022), frontend developer (part-time internship, local software company, Zaječar, 2023), independent full-stack developer (self-directed, Belgrade, 2024), software developer on a B2B contract for Fairphone (2025 – present). Employer names for 2022 and 2023 are not given on the CV.
+- Fairphone work: Odoo modules for sustainability and procurement teams, replication of ERP data into analytical warehouses, the architecture of a customer-facing web shop, direct stakeholder work. Client-owned, licensed software; described only at the level the CV uses.
+- Working knowledge of Java (Spring Boot) and PHP (Laravel); Angular; GitLab CI; motion & graphic design.
+- The Order & revenue management platform (Go, Next.js, TypeScript, PostgreSQL) has no public repository.
+- The 2023 internship also included contributing to C# codebases on .NET in a Windows environment (owner's statement, 2026-09-23; not on the CV PDF, shown on the site and /resume). C# (.NET) is also listed under Languages as working knowledge on the owner's request the same day.
+- BSc Software Engineering, Singidunum University, Belgrade, expected 2027.
+- Open to remote (CET); available as a B2B contractor or an employee. On 2026-09-23 the owner added: looking for full-time or part-time roles with flexible working hours, remote friendly. The site and /resume carry that longer line; the CV PDF still has the shorter one.
 
-## Verified from the owner's repositories (2026-09-12 scan)
+## From the owner's earlier statements, kept because the CV does not contradict them
 
-Express, Mongoose, JWT and bcrypt, Multer, React Router, Redux Toolkit, and Vite (four 2023 full-stack apps, private); Django (a 2023 e-commerce app, private); Spring Boot and Spring Data JPA (rpg-campaign-manager, public); plain PHP MVC (barber-shop, public); TypeORM and Jest (NestJS projects); Prisma and Stripe (2024 Next.js products, private); Bash (four repos plus the hardening script); GitHub Actions (one repo); Lua (LazyConfig, public); C and C++ across 16 repos, including the public HTTP-Proxy (multi-hop forward proxy, encryption phase in progress per its README) and Password-Manager (C++20, PostgreSQL, GPG + AES-256-GCM). Not found anywhere: Vue, Svelte, .NET, GraphQL, Kubernetes, Terraform.
+- "Off the keyboard": sim racing, Counter-Strike, cars; the gym; pasta and protein-rich meals.
+- The six working principles under "How I work" in About.
+- The "Working with people" list in the projects section, which matches the CV's stakeholder bullet.
+- The "How I work with AI" section (loop, prompting, day to day, real systems). The CV mentions AI-assisted development (Claude Code, Codex) only under Skills; the section stays as site-only material.
+- Home lab: Forgejo, hardened Linux servers, Prometheus and Grafana (the CV's Ops line names Forgejo and hardened home-lab servers), plus two free-time items the owner asked for on 2026-09-23: IRC chats hosted over Tor onion services and I2P garlic routing, and Rust implementations for systems work.
 
-## Open questions
+## Verified from public repositories
 
-1. Confirm the contract allows naming Fairphone on the site and resume.
-2. Which plugins (now in the skills group) and MCP servers (AI section) to keep; remove any not actually in use.
-3. The "frontend developer" and "backend servers" timeline entries have no employer or dates; supply them if the earlier work should appear as a role on the resume.
+- E-commerce platform (`toy_store`): the highlights on the site are the CV's; the problem statement draws on the README (external product catalog, cache-aside Redis, graceful degradation).
+- Systems & networking in C/C++ (`HTTP-Proxy`, plus `micro-http-server` and `Password-Manager`): the CV's highlights; the proxy README marks its encryption phase as in progress.
+- RPG campaign manager (`rpg-campaign-manager`): Internet Software Architecture coursework; Java 21, Spring Boot 3, JWT access and refresh tokens, role-based authorization, React SPA.
+- None of the four repositories contains a screenshot or an architecture diagram, so the project cards have no images.
 
 ## Deliberately not on the site
 
-- Internals, data, or numbers of the client systems (the replication engine included).
-- The password-manager project and its agent prompts, the Sales Report System, the desk-ordering MRP, the website scraper, the message-queue microservice, and the Rust platform under NDA, all removed at the owner's request.
-- Any Linux administration job: the operations background is Hack The Box and the home lab.
+- Any count of projects, any metric, any claim of "professional experience" phrased differently from the CV's "four years of hands-on web development".
+- Penetration testing and red or blue team practice (removed from the main page at the owner's request; not on the CV). IRC hosting over Tor and I2P returned to the home lab section the same day, on the owner's request, as a free-time project.
+- Editor and tool lists (Neovim, tmux, lazygit) and plugin names.
+- Internals, data, or numbers of the client systems.
+- A statement that the degree is completed. It is expected in 2027.
 
-## Recommended future improvements
+## Open questions
 
-- Add a light theme (the tokens support it; print CSS shows the pattern).
-- Load a display font into the Open Graph image if the build-time fetch is ever unwanted.
-- Keep `data/` as the single source: the resume derives competencies, skills, experience, story, and education from it.
+1. Should the "How I work with AI" section stay? It is not on the CV.
+2. Employer names for the 2022 and 2023 internships, if they should appear.
+3. The `/resume` page mirrors the CV content in HTML; the download button serves the CV PDF itself. If the PDF changes, update `data/` to match, or drop `/resume`.

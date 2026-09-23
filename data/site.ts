@@ -1,8 +1,8 @@
 export const SITE = {
   url: "https://bok1c4.com",
-  name: "Boris Nikolic",
-  title: "Boris Nikolic · Software Developer",
+  name: "Boris Nikolić",
+  title: "Boris Nikolić · Backend-focused Full-Stack Developer (Python, Go, PostgreSQL)",
   description:
-    "Software developer in Belgrade building platforms and shipping software with AI as a daily pair: backend and data systems, Odoo modules, Rust, PostgreSQL, and a self-hosted home lab.",
+    "Boris Nikolić · Backend-focused Full-Stack Developer (Python, Go, PostgreSQL)",
   repo: "https://github.com/bok1c4/prtf",
 } as const;

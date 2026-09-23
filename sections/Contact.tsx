@@ -12,8 +12,8 @@ export default function Contact() {
           <SectionHeader
             id="contact-title"
             command="cat contact.md"
-            title="Open to interesting projects and opportunities"
-            lede="Backend-heavy full-stack roles and contract work, especially data and integration systems. Email is the fastest way to reach me."
+            title="Open to new roles and projects"
+            lede="Looking for full-time or part-time roles with flexible working hours, remote friendly (CET), as a B2B contractor or an employee. Email is the fastest way to reach me."
             className="mb-4"
           />
           <a

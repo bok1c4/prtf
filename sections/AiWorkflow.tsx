@@ -92,30 +92,12 @@ export default function AiWorkflow() {
         </SubPane>
       </div>
 
-      <div className="mt-4 grid gap-4 md:grid-cols-3">
+      <div className="mt-4 grid gap-4 md:grid-cols-2">
         <SubPane title="day to day" summary={aiWorkflow.claudeCode.summary}>
           <ItemList items={aiWorkflow.claudeCode.items} />
         </SubPane>
         <SubPane title="real systems" summary={aiWorkflow.mcp.summary}>
           <ItemList items={aiWorkflow.mcp.items} />
-        </SubPane>
-        <SubPane
-          title="environment"
-          summary="The tools around the agent, all terminal-first."
-        >
-          <ul className="space-y-2">
-            {aiWorkflow.environment.map((item) => (
-              <li
-                key={item}
-                className="flex gap-2 text-[14px] leading-relaxed text-ink-2"
-              >
-                <span aria-hidden="true" className="text-gb-bg4">
-                  -
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </SubPane>
       </div>
     </Pane>

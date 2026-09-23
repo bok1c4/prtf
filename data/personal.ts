@@ -1,7 +1,7 @@
 import type { PersonalInfo, Positioning } from "@/types";
 
 export const personal: PersonalInfo = {
-  name: "Boris Nikolic",
+  name: "Boris Nikolić",
   title: "Software Developer",
   handle: "boris@prtf",
   email: "borisnikolic2302@gmail.com",
@@ -17,17 +17,22 @@ export const personal: PersonalInfo = {
 };
 
 export const positioning: Positioning = {
-  eyebrow: "Software developer · Belgrade, Serbia",
-  headline: "I build platforms and ship software",
-  headlineEmphasis: "with AI as my daily pair.",
-  story:
-    "Started with robots in middle school, got hooked on Linux in a VM, learned the trade through Hack The Box, C#/.NET systems, and frontend work in high school, and I've spent the past four years going from frontend-only work to full-stack platforms while finishing a Software Engineering degree.",
+  taglineLead: "Software Developer",
+  taglineFocus: "Backend-focused Full-Stack (Python, Go, PostgreSQL, React)",
+  subline:
+    "Based in Belgrade, Serbia · Remote friendly (CET) · Looking for full-time or part-time roles with flexible working hours · B2B contractor or employee",
+  highlights: [
+    "Odoo/ERP modules and data pipelines in Python and PostgreSQL for Fairphone (2025 – present)",
+    "Node.js/Express and Go services, with the React and Next.js frontends that consume them",
+    "Systems code in C/C++: HTTP server, multi-hop forward proxy, password manager",
+    "Four years of hands-on web development, from frontend internships to contract engineering",
+  ],
   summary: [
-    "I write software for work and for fun. Four years of professional work: started on the frontend, followed the requests into the backend, now the full stack, backend first. Most of the recent work has been backend and data systems: Odoo modules, ERP data replication, and the services around them. Beside the home lab, the rest of the time goes into finishing university.",
-    "AI is my daily pair: I brief it like a teammate, plan with it before code, and read every change before it ships. The craft got faster without getting less mine. I love what I do.",
+    "Backend-focused full-stack developer with four years of hands-on web development, progressing from frontend internships (2022–2023) through independent Node.js backend work (2024) to contract engineering for Fairphone (2025–present), where I build Odoo/ERP modules and data pipelines in Python and PostgreSQL.",
+    "I own features end to end, from stakeholder requirements to deployment, and also write Go services and systems code in C/C++.",
   ],
   university:
-    "BSc Software Engineering. Enrolled in 2023, finishing by the end of 2027, working as a software developer alongside it.",
+    "BSc Software Engineering, Singidunum University, Belgrade. Expected 2027, alongside the work.",
   person: [
     "Sim racing, Counter-Strike, and cars.",
     "The gym, trying to stay in shape.",
@@ -38,38 +43,6 @@ export const positioning: Positioning = {
     "Technical terms and trade-offs explained in plain language, so non-technical stakeholders can decide on priorities and timelines with the full picture.",
     "Modules and features shipped end to end: built, tested, and tailored to the client's production VPS.",
     "Alongside the stakeholders from the first requirement to delivery, so what ships matches how they actually work.",
-  ],
-  capabilities: [
-    {
-      title: "Backend services and APIs",
-      detail: "Go, Python, NestJS; REST design, auth, gateway-fronted services",
-    },
-    {
-      title: "Odoo modules and PostgreSQL",
-      detail: "ERP modules, query optimization, triggers, reporting over large datasets",
-    },
-    {
-      title: "ERP integration and data replication",
-      detail: "Odoo data into analytical warehouses, built for reliable delivery",
-    },
-    {
-      title: "AI-assisted engineering",
-      detail: "briefs, plans, and reviews with an agent daily; MCP tools acting on pipelines and infrastructure",
-    },
-    {
-      title: "Full-stack delivery",
-      detail:
-        "React, Angular, and Next.js frontends; Express, Laravel, Django, and Spring Boot backends; JWT auth, payments, admin tooling",
-    },
-    {
-      title: "Linux and self-hosting",
-      detail: "Ubuntu servers, iptables firewalls, SSH hardening, monitoring, Docker Compose",
-    },
-    {
-      title: "Working with stakeholders",
-      detail:
-        "Requirements gathered directly, trade-offs explained in plain language, modules and features shipped, tested, and tailored to the production VPS",
-    },
   ],
   principles: [
     {
@@ -105,9 +78,11 @@ export const positioning: Positioning = {
   ],
   currently: [
     { label: "role", value: "Software Developer" },
-    { label: "based", value: "Belgrade, Serbia (CET)" },
-    { label: "degree", value: "BSc Software Engineering, 2023 – 2027" },
+    { label: "open to", value: "Full-time or part-time, flexible hours · remote friendly (CET) · B2B contractor or employee" },
+    { label: "based", value: "Belgrade, Serbia" },
+    {
+      label: "degree",
+      value: "BSc Software Engineering, Singidunum University, expected 2027",
+    },
   ],
-  short:
-    "Software Developer · Backend-focused full-stack · Go, Python, Rust, TypeScript, PostgreSQL, Odoo. Four years of professional work, final year of a Software Engineering degree, AI (Claude Code, Codex, MCP tools) as a daily pair.",
 };

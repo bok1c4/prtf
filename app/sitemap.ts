@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { caseStudies, SITE } from "@/data";
+import { SITE } from "@/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -11,11 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    ...caseStudies.map((study) => ({
-      url: `${SITE.url}/work/${study.slug}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
   ];
 }

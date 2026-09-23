@@ -12,15 +12,14 @@ import { useRouter } from "next/navigation";
 import PixelIcon from "@/components/PixelIcon";
 import {
   aiWorkflow,
-  caseStudies,
   education,
   homelab,
   personal,
   positioning,
+  projects,
+  roles,
   SITE,
   skillGroups,
-  timeline,
-  workNote,
 } from "@/data";
 
 type Line = { id: number; kind: "cmd" | "out" | "err" | "sys"; text: string };
@@ -30,7 +29,7 @@ const FILES = [
   "ai-workflow.md",
   "contact.md",
   "experience.md",
-  "homelab.md",
+  "infra.md",
   "resume.txt",
   "skills/",
   "work/",
@@ -46,10 +45,10 @@ const COMMANDS = [
   "neofetch",
   "whoami",
   "skills",
-  "homelab",
-  "systemctl",
+  "infra",
   "contact",
   "resume",
+  "cv",
   "ai",
   "clear",
   "pwd",
@@ -60,12 +59,12 @@ const COMMANDS = [
   "theme",
 ];
 
-const QUICK = ["help", "ls work", "cat ai-workflow.md", "homelab", "git log"];
+const QUICK = ["help", "ls work", "git log", "skills", "cat about.md"];
 
 const PALETTE = "__palette__";
 const NEOFETCH = "__neofetch__";
 
-const slugs = caseStudies.map((study) => study.slug);
+const slugs = projects.map((project) => project.slug);
 const facts = Object.fromEntries(
   positioning.currently.map((fact) => [fact.label, fact.value]),
 );
@@ -79,8 +78,8 @@ export function neofetchRows(): [string, string][] {
     ["OS", "Linux-flavoured web · Next.js 15 · TypeScript"],
     ["Host", SITE.url.replace("https://", "")],
     ["Shell", "prtf-sh 2.0"],
-    ["Editor", "LazyVim · tmux"],
     ["Role", facts.role],
+    ["Open to", facts["open to"]],
     ["Location", facts.based],
     ["Degree", facts.degree],
     ["Contact", personal.email],
@@ -91,18 +90,19 @@ function help(): string[] {
   return [
     "prtf-sh: available commands",
     "  help               this list",
-    "  ls [work|skills]   list files, case studies, or skill groups",
-    "  cat <file>         about.md · ai-workflow.md · homelab.md · contact.md · experience.md · resume.txt · work/<slug>",
-    "  open <slug>        open a case study (tab completes)",
-    "  git log            the story as commits",
+    "  ls [work|skills]   list files, projects, or skill groups",
+    "  cat <file>         about.md · experience.md · ai-workflow.md · infra.md · contact.md · resume.txt · work/<slug>",
+    "  open <slug>        jump to a project (tab completes)",
+    "  git log            experience as commits",
     "  neofetch           who is this",
-    "  homelab            the lab: network, firewall, servers, hardening",
     "  skills             skill tree",
+    "  infra              home lab: self-hosted infrastructure and free-time projects",
     "  contact            how to reach me",
-    "  resume             open the resume",
+    "  cv                 download the CV",
+    "  resume             open the resume page",
     "  clear              clear the screen (ctrl+l)",
     "",
-    "keys: ↑/↓ history · tab completion · : focuses this shell · g + h/a/w/l/s/e/c/r jumps · ? help",
+    "keys: ↑/↓ history · tab completion · : focuses this shell · g + h/w/e/s/a/l/c/r/d jumps · ? help",
   ];
 }
 
@@ -110,13 +110,9 @@ function listWork(): string[] {
   const width = Math.max(...slugs.map((slug) => slug.length)) + 2;
   return [
     "work/",
-    ...caseStudies.map(
-      (study) => `  ${pad(study.slug + "/", width)}${study.title}`,
-    ),
+    ...projects.map((project) => `  ${pad(project.slug + "/", width)}${project.title}`),
     "",
-    "open <slug> to read a case study",
-    "",
-    `~/projects: ${workNote.count} ${workNote.detail}`,
+    "open <slug> to jump to a project",
   ];
 }
 
@@ -125,7 +121,7 @@ function listSkills(): string[] {
     "skills/",
     ...skillGroups.map(
       (group) =>
-        `  ${pad(group.category.toLowerCase().replace(/ /g, "-") + "/", 30)}${group.primary
+        `  ${pad(group.category.toLowerCase() + "/", 12)}${group.primary
           .map((item) => item.name)
           .join(", ")}`,
     ),
@@ -139,7 +135,7 @@ function skillTree(): string[] {
     out.push(`${last ? "└── " : "├── "}${group.category}`);
     const items = [
       ...group.primary.map((item) => item.name),
-      ...(group.secondary ?? []).map((item) => `${item.name} (also)`),
+      ...(group.secondary ?? []).map((item) => `${item.name} (working knowledge)`),
     ];
     items.forEach((item, ii) => {
       const lastItem = ii === items.length - 1;
@@ -150,35 +146,50 @@ function skillTree(): string[] {
 }
 
 function gitLog(): string[] {
-  const commits = [...timeline].reverse();
   return [
-    "commit history (story)",
-    ...commits.map((entry, index) => {
-      const ref = index === 0 ? "HEAD -> main" : `HEAD~${index}`;
-      return `${pad(ref, 14)}${entry.ref}: ${entry.title}`;
-    }),
+    "commit history (experience)",
+    ...roles.map(
+      (role) => `${pad(role.period, 16)}${role.title}, ${role.company}`,
+    ),
     "",
-    `education  ${education.degree} (${education.status.toLowerCase()})`,
+    `education  ${education.degree}, ${education.institution} (${education.status.toLowerCase()})`,
   ];
 }
 
-function story(): string[] {
+function experience(): string[] {
   return [
-    ...[...timeline].reverse().flatMap((entry) => [
-      `${entry.ref}: ${entry.title}`,
-      `  ${entry.detail}`,
+    ...roles.flatMap((role) => [
+      `${role.period}  ${role.title}, ${role.company}`,
+      ...(role.meta || role.summary
+        ? [`  ${[role.meta, role.summary].filter(Boolean).join(" · ")}`]
+        : []),
+      ...role.highlights.map((item) => `  - ${item}`),
+      "",
     ]),
-    "",
-    `education: ${education.degree}, ${education.status.toLowerCase()}`,
+    `education: ${education.degree}, ${education.institution}, ${education.status.toLowerCase()}`,
   ];
 }
 
-function homelabStatus(): string[] {
+function infra(): string[] {
   const width = Math.max(...homelab.items.map((item) => item.label.length)) + 2;
   return [
     homelab.intro,
     "",
     ...homelab.items.map((item) => `${pad(item.label + ":", width)}${item.detail}`),
+  ];
+}
+
+function projectDetail(slug: string): string[] | null {
+  const project = projects.find((item) => item.slug === slug);
+  if (!project) return null;
+  return [
+    `# ${project.title}`,
+    project.problem,
+    "",
+    ...project.highlights.map((item) => `  - ${item}`),
+    "",
+    `stack: ${project.stack.join(", ")}`,
+    project.repo ? `repo:  ${project.repo}` : `repo:  ${project.note ?? "none"}`,
   ];
 }
 
@@ -219,8 +230,8 @@ function catFile(name: string): { out: string[]; err?: boolean; nav?: string } {
           ...aiWorkflow.mcp.items.map((item) => `  - ${item.name}: ${item.detail}`),
         ],
       };
-    case "homelab.md":
-      return { out: homelabStatus() };
+    case "infra.md":
+      return { out: infra() };
     case "contact.md":
       return {
         out: [
@@ -229,10 +240,11 @@ function catFile(name: string): { out: string[]; err?: boolean; nav?: string } {
             (link) => `${pad(link.label.toLowerCase(), 10)}${link.href}`,
           ),
           `location  ${personal.location}`,
+          `open to   ${facts["open to"]}`,
         ],
       };
     case "experience.md":
-      return { out: story() };
+      return { out: experience() };
     case "resume.txt":
     case "resume":
       return { out: ["opening /resume ..."], nav: "/resume" };
@@ -243,35 +255,29 @@ function catFile(name: string): { out: string[]; err?: boolean; nav?: string } {
       return { out: [`cat: ${clean}: Is a directory`], err: true };
     default: {
       const slug = clean.replace(/^work\//, "").replace(/\/$/, "");
-      const study = caseStudies.find((item) => item.slug === slug);
-      if (study) {
-        return {
-          out: [
-            `# ${study.title}`,
-            study.summary,
-            "",
-            `role: ${study.role}`,
-            `stack: ${(study.stack.length ? study.stack : study.tags).join(", ")}`,
-            "",
-            `open ${study.slug} to read the full case study`,
-          ],
-        };
-      }
+      const detail = projectDetail(slug);
+      if (detail) return { out: detail };
       return { out: [`cat: ${name}: No such file or directory`], err: true };
     }
   }
 }
 
-function openStudy(arg: string): { out: string[]; err?: boolean; nav?: string } {
+function openProject(arg: string): { out: string[]; err?: boolean; jump?: string } {
   const slug = arg.replace(/^work\//, "").replace(/\/$/, "");
   if (!slug) return { out: ["usage: open <slug>  (try: ls work)"], err: true };
-  if (slugs.includes(slug)) {
-    return { out: [`opening /work/${slug} ...`], nav: `/work/${slug}` };
-  }
-  return { out: [`open: no such case study: ${slug} (try: ls work)`], err: true };
+  const detail = projectDetail(slug);
+  if (detail) return { out: detail, jump: `project-${slug}` };
+  return { out: [`open: no such project: ${slug} (try: ls work)`], err: true };
 }
 
-type Result = { out: string[]; err?: boolean; nav?: string; clear?: boolean };
+type Result = {
+  out: string[];
+  err?: boolean;
+  nav?: string;
+  jump?: string;
+  download?: string;
+  clear?: boolean;
+};
 
 function run(raw: string, history: string[]): Result {
   const trimmed = raw.trim();
@@ -298,14 +304,14 @@ function run(raw: string, history: string[]): Result {
       if (!args[0]) return { out: ["usage: cat <file>  (try: ls)"], err: true };
       return catFile(args[0]);
     case "open":
-      return openStudy(args[0] ?? "");
+      return openProject(args[0] ?? "");
     case "cd": {
       const target = args[0] ?? "~";
       if (target === "~" || target === "." || target === "/") return { out: [] };
       if (target.replace(/\/$/, "") === "work") {
         return { out: ["work/: use `ls work` and `open <slug>`"] };
       }
-      return openStudy(target);
+      return openProject(target);
     }
     case "git":
       if (args[0] === "log") return { out: gitLog() };
@@ -317,18 +323,22 @@ function run(raw: string, history: string[]): Result {
       return { out: [NEOFETCH, "", PALETTE] };
     case "whoami":
       return {
-        out: [`${personal.name}: ${personal.title}, backend-focused full-stack. ${personal.location}.`],
+        out: [
+          `${personal.name}: ${positioning.taglineLead} · ${positioning.taglineFocus}. ${personal.location}.`,
+        ],
       };
     case "skills":
     case "tree":
       return { out: skillTree() };
+    case "infra":
     case "homelab":
-    case "systemctl":
-      return { out: homelabStatus() };
+      return { out: infra() };
     case "contact":
       return catFile("contact.md");
     case "resume":
       return catFile("resume.txt");
+    case "cv":
+      return { out: ["downloading Boris_Nikolic_CV.pdf ..."], download: "/Boris_Nikolic_CV.pdf" };
     case "ai":
       return catFile("ai-workflow.md");
     case "clear":
@@ -469,7 +479,7 @@ export default function Terminal() {
       "",
       PALETTE,
       "",
-      "type `help` to list commands. try: ls work · cat ai-workflow.md · homelab",
+      "type `help` to list commands. try: ls work · git log · skills",
     ];
     setLines(
       intro.map((text, index) => ({
@@ -501,6 +511,17 @@ export default function Terminal() {
       }
       setInput("");
       if (result.nav) router.push(result.nav);
+      if (result.jump) {
+        document.getElementById(result.jump)?.scrollIntoView({ block: "start" });
+      }
+      if (result.download) {
+        const anchor = document.createElement("a");
+        anchor.href = result.download;
+        anchor.download = "";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
     },
     [history, push, router],
   );
