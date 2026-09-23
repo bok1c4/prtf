@@ -2,7 +2,7 @@ import type { AiWorkflow } from "@/types";
 
 export const aiWorkflow: AiWorkflow = {
   intro:
-    "AI is how I build now, and I enjoy the craft more because of it. Not autocomplete on the side: an agent in the terminal all day, briefed like a teammate. The loop stays the same whether the codebase is years old or an empty directory: brief, plan, build with tests, review, verify, document. The agent gets the same context a new colleague would, written down in the repository.",
+    "An agent in the terminal, briefed like a teammate. The loop stays the same whether the codebase is years old or an empty directory: brief, plan, build with tests, review, verify, document. The agent gets the same context a new colleague would, written down in the repository.",
   loop: [
     {
       step: "brief",
@@ -44,12 +44,12 @@ export const aiWorkflow: AiWorkflow = {
       "Hard rules as NEVER / ALWAYS lists (no secret logging, parameterized SQL, crypto/rand only) that come before style preferences.",
       "A reporting format for finished work: what changed, files, tests added, breaking changes, next steps.",
       "An example session in the prompt so the agent sees a full loop, not just rules.",
-      "Tool inventory in CLAUDE.md: which commands, plugins, and MCP servers exist, so the agent uses real tools instead of guessing.",
+      "Tool inventory in CLAUDE.md: which commands and MCP servers exist, so the agent uses real tools instead of guessing.",
     ],
   },
   claudeCode: {
     summary:
-      "A daily pair, not a chat window. Every repository carries its own setup, so a session starts knowing the project instead of asking about it.",
+      "Every repository carries its own setup, so a session starts knowing the project instead of asking about it.",
     items: [
       {
         name: "a codebase I'm new to",
@@ -80,7 +80,7 @@ export const aiWorkflow: AiWorkflow = {
       {
         name: "GitLab",
         detail:
-          "Pipeline automation from Claude: merge requests, pipeline status, and job logs without leaving the session.",
+          "Pipeline automation from the agent: merge requests, pipeline status, and job logs without leaving the session.",
       },
       {
         name: "cloud infrastructure",
@@ -90,19 +90,13 @@ export const aiWorkflow: AiWorkflow = {
       {
         name: "issue and ops trackers",
         detail:
-          "GitHub, Jira and Confluence, Linear, Datadog, and PagerDuty connectors from the engineering plugin, enabled per project.",
+          "GitHub, Jira and Confluence, Linear, Datadog, and PagerDuty connectors, enabled per project.",
       },
       {
         name: "browser",
         detail:
-          "Claude drives a browser against the running app: screenshots, console, DOM checks, keyboard navigation.",
+          "The agent drives a browser against the running app: screenshots, console, DOM checks, keyboard navigation.",
       },
     ],
   },
-  environment: [
-    "Neovim (LazyVim) as the editor",
-    "tmux and lazygit in the terminal",
-    "Linux on every machine",
-    "Claude Code and Codex as the agents; local LLMs for experiments",
-  ],
 };

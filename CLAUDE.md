@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A personal portfolio site with case studies and a resume. All content is hardcoded in `data/`; there is no CMS, API, or database.
+A personal portfolio site. All content is hardcoded in `data/` and matches the owner's CV in `public/Boris_Nikolic_CV.pdf`; there is no CMS, API, or database.
 
 ## Stack
 
@@ -32,31 +32,29 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 
 ## Architecture
 
-- **Content lives in `data/`** (`site.ts`, `personal.ts`, `skills.ts`, `experience.ts`, `projects.ts`, `resume.ts`, `ai.ts`, `homelab.ts`), re-exported from `data/index.ts` and typed by `types/index.ts`. Sections, pages, and the shell's command output are presentation only.
-- **Routes**: `/` (`app/page.tsx` composes `sections/*` in order: Hero, Work, Experience, Capabilities, AiWorkflow, HomeLab, About, Contact: the work first, then how it gets done), `/work/[slug]` (statically generated from `caseStudies`), `/resume`, plus `sitemap.ts`, `robots.ts`, `opengraph-image.tsx`, `icon.tsx`, `not-found.tsx`. The tab order in `components/TopBar.tsx` and the chord order in `components/KeyboardNav.tsx` mirror the page order.
+- **Content lives in `data/`** (`site.ts`, `personal.ts`, `skills.ts`, `experience.ts`, `projects.ts`, `resume.ts`, `ai.ts`, `homelab.ts`), re-exported from `data/index.ts` and typed by `types/index.ts`. Sections, pages, `/resume`, and the shell's command output are presentation only; change copy in `data/`, in one place.
+- **Routes**: `/` (`app/page.tsx` composes `sections/*` in order: Hero, Work, Experience, Capabilities, AiWorkflow, HomeLab, About, Contact), `/resume`, plus `sitemap.ts`, `robots.ts`, `opengraph-image.tsx`, `icon.tsx`, `not-found.tsx`. The tab order in `components/TopBar.tsx` and the chord order in `components/KeyboardNav.tsx` mirror the page order.
 - **Design tokens** are CSS variables in `app/globals.css`: raw gruvbox colors (`--gb-*`, utilities `text-gb-yellow`, `bg-gb-green`, ...) mapped onto semantic tokens (`--canvas`, `--surface`, `--ink`, `--accent`, ...) exposed through `@theme inline` as `bg-canvas`, `text-ink`, `border-line`, etc. Print CSS re-maps the tokens to a light palette for `.resume`. Add new colors as tokens, not as raw hex in components.
 - **TUI primitives**: `components/ui/Pane.tsx` (bordered section with a title on the border), `components/ui/Prompt.tsx` (decorative `user@host:path$ cmd` line), `components/ui/Buffer.tsx` (line-number gutter plus status line), `components/ui/SectionHeader.tsx` (prompt + `#` heading). Chrome: `components/TopBar.tsx` (tmux windows), `components/StatusLine.tsx` (bottom bar), `components/KeyboardNav.tsx` (`g` chords, `:`, `?`).
 - **Client components**: `Terminal.tsx` (the shell; its command table lives in the same file and reads from `data/`), `StatusLine.tsx`, `KeyboardNav.tsx`, `PrintButton.tsx`. Everything else is a server component; add `"use client"` only for state or browser events.
 - **Links**: use `components/ui/SmartLink.tsx` (or `ButtonLink`) rather than raw `<a>`/`Link`; it handles external links (new tab plus screen-reader note), hash and mailto links, and static files.
-- **Diagrams** are dependency-free (`FlowDiagram`: CSS grid, stacks on mobile). Per-case-study diagram content is in `components/diagrams/index.tsx`, keyed by `CaseStudy.diagram`. Only public projects get diagrams.
 - `lib/utils.ts` exports `cn()` (clsx + tailwind-merge), used by the ui primitives.
 - TypeScript path alias: `@/*` → project root
 - `next.config.ts` sets `output: "standalone"` for Docker
 
 ## Content rules
 
-- Every fact must trace to `data/`, the public GitHub repositories, or the owner's confirmation. `CONTENT_REVIEW.md` lists what is unverified; do not turn an open question into a claim. `PROJECT_ARCHITECTURE.md` records what may be said about each case-study system and where it came from.
-- No numeric metrics unless the owner supplies them.
-- Client work (Fairphone on Odoo, the Rust platform under NDA) is described only at the level already on the pages; do not add internals, data, or numbers. The hero never names clients.
-- The owner never held a Linux administration job; the operations background is Hack The Box and the home lab.
-- Private repositories are never named on the site; they may inform which technologies are listed (see the scan record in `CONTENT_REVIEW.md`). Two of them (`fair-material`, `DCP`) are client code and must not be described at all.
-- Copy style: no em dashes anywhere; use colons, commas, or "·" instead. Keep copy lean, no filler.
-- No self-repetition: a resume project description never repeats tool names from its stack line (tools in the stack line, capabilities in the description), and adjacent copy (summary vs headline, intro vs list rows, sibling rows) must not restate each other.
-- Do not reintroduce phrases the owner removed: "multi-agent pipelines", "Human-in-the-Loop Review", "AI-Assisted Development", "Context Engineering" ("AI-assisted engineering" as a section title is fine). Make the AI-in-the-loop point at most once per page or document.
+- The CV in `public/Boris_Nikolic_CV.pdf` is the source of truth. Every fact on the site must trace to it, to a public GitHub repository, or to the owner's confirmation recorded in `CONTENT_REVIEW.md`. Do not turn an open question into a claim.
+- No numeric metrics, project counts, or dates beyond those on the CV. The degree is expected in 2027; never say it is completed.
+- Client work (Fairphone) is described only at the level the CV uses; do not add internals, data, or numbers.
+- Copy leads with the role and the stack, not with AI. AI-assisted development appears under Skills and in its own section; keep it out of the hero and the summary.
+- No editor or tool lists (Neovim, tmux, lazygit) and no plugin names on the site.
+- Private repositories are never named on the site; two of them (`fair-material`, `DCP`) are client code and must not be described at all.
+- Copy style: no em dashes; use colons, commas, "·", or an en dash in date ranges. Keep copy lean, no filler, and do not let adjacent copy restate itself.
 
-## Resume
+## Resume and CV
 
-`/resume` renders from `data/` with print styles (A4, navigation hidden). The printed resume must fit one A4 page; the print CSS in `app/globals.css` is sized for that, so check the page count after any content change. `public/resume.pdf` is generated from that route with headless Chrome (command in `README.md`); regenerate it after any content change. `ResumeButton` links to `/resume` and to `resume.url` (`/resume.pdf`).
+The download button serves the owner's own CV file, `public/Boris_Nikolic_CV.pdf` (path in `data/resume.ts`). `/resume` renders the same content from `data/` with print styles; it is not the source of the PDF. When the CV changes, replace the file and update `data/` to match.
 
 ## Docker
 

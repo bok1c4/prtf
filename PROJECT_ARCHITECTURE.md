@@ -1,40 +1,27 @@
 # Project Architecture Notes
 
-Notes on the systems shown on the portfolio. Client work is licensed and under agreement, so it is not documented here beyond what the site itself says.
+What may be said about each system on the site and where it comes from. Client work is licensed and under agreement, so it is described only at the level the owner's CV uses.
 
-## Client work (Fairphone, 2025 – present)
+## Fairphone (2025 – present, B2B contract)
 
-Odoo modules for sustainability and procurement operations that replaced manual, hand-kept tracking; replication of ERP data into analytical warehouses; the architecture of a customer-facing web shop on top of Odoo. Stack: Odoo, Python, PostgreSQL. Nothing about internals, data, or numbers is recorded in this repository; the site's client page carries a visible note to that effect.
+Odoo modules (Python, PostgreSQL) for sustainability and procurement teams that replaced manual, hand-kept tracking with automated workflows and reporting over large datasets; replication of ERP data into analytical warehouses with reliable delivery as the core requirement; the architecture of a customer-facing web shop on top of Odoo (an API gateway in front of the ERP with separate frontend services). Nothing about internals, data, or numbers is recorded in this repository.
 
-## Toy Store (university project, public repository)
+## E-commerce platform (public repository: toy_store)
 
-Everything below is from the repository README.
+From the CV: Go (Gin) backend with dual-token JWT auth and revocable refresh tokens, two-step Stripe PaymentIntent checkout, order line-item snapshots, admin dashboard, cache-aside Redis catalog that degrades gracefully, Nginx and Docker Compose. From the README: the product catalog comes from an external API and is cached in Redis (5-minute TTL); when Redis is down the request continues without caching; Next.js 14 App Router frontend; PostgreSQL 16 with golang-migrate; Nginx rate limiting; health-checked Docker Compose startup order.
 
-- Nginx reverse proxy with rate limiting (auth 10 req/min, other API 200 req/min) as the only public entry point.
-- Go 1.23 + Gin API in three layers (handlers, services, repositories); JWT middleware; RBAC by role claim.
-- Next.js 14 App Router: server components for the home page, client components with Zustand and Axios elsewhere; Axios interceptor refreshes tokens on 401; Zod validation; next-themes.
-- PostgreSQL 16 (users, orders, order_items, cart_items, wishlist_items; UUID keys; golang-migrate).
-- Redis 7: refresh tokens (15-minute access, 7-day refresh, rotation) and catalog cache (cache-aside, 5-minute TTL, graceful degradation).
-- Stripe two-step PaymentIntent flow; order lines snapshot name, price, image.
-- Docker Compose with health-checked startup order.
-- Known limitations: in-memory search, client-side pagination, HTTP only, webhooks need the Stripe CLI, no email.
+## Systems & networking in C/C++ (public repositories: HTTP-Proxy, micro-http-server, Password-Manager)
 
-## RPG campaign manager (university coursework, public repository)
+From the CV: a multi-client HTTP server built from POSIX sockets up, a multi-hop HTTP forward proxy with layered encryption (in progress), and a terminal password manager with per-secret hybrid encryption (AES-256-GCM, GPG). From the READMEs: the proxy has single-hop forwarding and multi-hop chain routing working, with AES and RSA layered encryption between hops in progress; the password manager stores secrets in PostgreSQL, each under a fresh AES-256 key that is GPG-encrypted to the user's key fingerprint (C++20, CMake, Docker Compose for the database).
 
-Final project for the Internet Software Architecture course: Spring Boot 3.4 REST API (Java 21) with JWT access and refresh tokens and role-based authorization, Spring Data JPA over PostgreSQL 16, a React 18 SPA (Vite, React Router, Axios), Docker Compose, Postman collection for the API.
+## Order & revenue management platform (no public repository)
 
-## HTTP forward proxy (C++, public repository)
+From the CV: Go, Next.js, TypeScript, PostgreSQL; a multi-role web application with RBAC, order management, revenue reporting, and notifications.
 
-From the README: a C++ HTTP forward proxy on native sockets. Phases 1 and 2 complete: an HTTP server with GET and POST handling, single-hop forwarding, and multi-hop chain routing (Proxy A → Proxy B → destination). Phase 3 in progress: AES symmetric encryption between nodes, RSA for key exchange, layered encryption and decryption at each hop.
+## RPG campaign manager (public repository: rpg-campaign-manager)
 
-## Terminal password manager (C++20, public repository)
-
-From the README: secrets stored in PostgreSQL; each password encrypted with a fresh random AES-256 key, that key GPG-encrypted (OpenPGP) to the user's key fingerprint and stored alongside the ciphertext; new entries use AES-256-GCM (`v2` envelope), legacy AES-256-CBC rows still read; C++20 (GCC 13+ / Clang 16+), CMake, Docker Compose for the database.
-
-## Control Management System Platform
-
-Multi-role CMS web application with authentication, order management, revenue reports, a notification system, and role-based access control (Go, Next.js, React, TypeScript, PostgreSQL). No public repository.
+Final project for the Internet Software Architecture course: Java 21, Spring Boot 3 REST API with JWT access and refresh tokens and role-based authorization, Spring Data JPA over PostgreSQL, a React single-page frontend, Docker Compose, a Postman collection for the API. Game masters run campaigns, sessions, and item catalogs; players manage characters and inventories.
 
 ## Home lab
 
-Self-hosted Ubuntu servers with a Forgejo git forge; home network and custom iptables firewall rules; SSH hardening automated end to end with the owner's own script; Grafana and Prometheus monitoring; local blockchains for experiments; locally hosted VMs for privacy and security work (Qubes OS, Whonix, Tor and onion services); self-hosted chats and servers for anonymous communication (onion services on Tor, garlic-routed services on I2P); penetration testing with red and blue team practice against the owner's own lab. Origins: Hack The Box (Linux, Git, Nmap, Kali Linux).
+Forgejo git forge on a self-hosted server, hardened Linux servers, Prometheus and Grafana monitoring; free-time projects on top: IRC chats hosted over Tor onion services and I2P garlic routing, and Rust implementations for systems work. Everything else the owner runs privately stays off the site.

@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-23: content matched to the CV
+
+The owner's CV (`public/Boris_Nikolic_CV.pdf`) is now the source of truth; the site says what it says, in the same words where the CV has them.
+
+- **Hero**: "Software Developer · Backend-focused Full-Stack (Python, Go, PostgreSQL, React)" with the sub-line "Based in Belgrade, Serbia · Remote friendly (CET) · Looking for full-time or part-time roles with flexible working hours · B2B contractor or employee" (the availability clause added on the owner's request after the CV was written), four highlights drawn from the CV, and a primary "download cv" button (`/Boris_Nikolic_CV.pdf`, also `g d` and the shell's `cv` command). The name is written Boris Nikolić, as on the CV.
+- **About and `/resume` summary**: the CV summary verbatim (first person). No "four years of professional experience" wording, nothing that leads with AI.
+- **Experience**: four dated roles, newest first, with the CV's bullets: Fairphone (2025 – present, B2B contract), independent full-stack developer (2024), frontend developer internship (2023, Zaječar), web development intern (2022, Zaječar). The 2023 entry also notes C# codebases on .NET in a Windows environment, added on the owner's request after the CV was written. The story timeline and the "over 50 projects" line are gone.
+- **Projects**: four cards in CV order (E-commerce platform, Systems & networking in C/C++, Order & revenue management platform, RPG campaign manager), each with a one-line problem statement, stack tags, two or three highlights, and a repo link where one exists. No images: none of the repositories contains a screenshot or diagram. The case-study pages under `/work/` and their components are removed; the Fairphone work is under experience.
+- **Skills**: the CV's six groups, short, no tools or plugins. Secondary items are labelled "working knowledge". C# (.NET) was added to Languages as working knowledge on the owner's request after the CV was written.
+- **Home lab** trimmed to Forgejo, hardened Linux servers, Prometheus and Grafana, plus two free-time items the owner added the same day: IRC chats hosted over Tor onion services and I2P garlic routing, and Rust implementations for systems work. Penetration testing and red or blue team material are off the main page.
+- **Education**: BSc Software Engineering, Singidunum University, Belgrade, expected 2027.
+- **SEO**: title, description, and Open Graph values are "Boris Nikolić · Backend-focused Full-Stack Developer (Python, Go, PostgreSQL)"; the OG image shows the tagline and sub-line.
+- **AI section** kept, with the "daily pair" phrasing, plugin names, and the tools pane removed; its `/resume` counterpart is the Skills line only.
+- **Removed**: `public/resume.pdf` (the generated PDF; the CV file replaces it), `app/work/[slug]`, `components/casestudy/*`, `components/diagrams/*`.
+
 ## 2026-09-22: home page order
 
 The work first, then how it gets done. New order: hero, case studies, story, skills, AI workflow, home lab, about, contact. Before, the AI workflow sat directly under the hero and the case studies came third, which front-loaded the page with process before a visitor had seen any work. The tab bar, the `?` help dialog, and the Open Graph image follow the new order; section ids and keyboard chords are unchanged.

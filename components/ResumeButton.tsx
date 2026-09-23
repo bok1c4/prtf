@@ -8,11 +8,11 @@ export default function ResumeButton({
 }) {
   return (
     <>
-      <ButtonLink href="/resume" variant="secondary" size={size} keyHint="r">
-        resume
+      <ButtonLink href={resume.url} download variant="secondary" size={size} keyHint="d">
+        {resume.label.toLowerCase()}
       </ButtonLink>
-      <ButtonLink href={resume.url} download variant="ghost" size={size}>
-        download pdf
+      <ButtonLink href="/resume" variant="ghost" size={size} keyHint="r">
+        resume
       </ButtonLink>
     </>
   );

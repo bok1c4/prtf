@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { personal, positioning, SITE } from "@/data";
 
-export const alt = `${SITE.name}: software developer building the data systems behind supply chains and sustainability reporting, with AI as a daily pair`;
+export const alt = SITE.title;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -76,9 +76,6 @@ export default async function OpenGraphImage() {
           <div style={{ display: "flex", fontSize: 54, color: "#fabd2f", fontWeight: 700 }}>
             # {personal.name}
           </div>
-          <div style={{ display: "flex", fontSize: 26, color: "#a89984" }}>
-            {positioning.eyebrow}
-          </div>
           <div
             style={{
               display: "flex",
@@ -86,13 +83,15 @@ export default async function OpenGraphImage() {
               fontSize: 34,
               lineHeight: 1.25,
               maxWidth: 1040,
-              marginTop: 8,
             }}
           >
-            <div style={{ display: "flex" }}>{positioning.headline}</div>
+            <div style={{ display: "flex" }}>{positioning.taglineLead} ·</div>
             <div style={{ display: "flex", color: "#8ec07c" }}>
-              {positioning.headlineEmphasis}
+              {positioning.taglineFocus}
             </div>
+          </div>
+          <div style={{ display: "flex", fontSize: 22, lineHeight: 1.35, color: "#a89984", marginTop: 8, maxWidth: 1040 }}>
+            {positioning.subline}
           </div>
         </div>
         <div
@@ -116,7 +115,7 @@ export default async function OpenGraphImage() {
             NORMAL
           </div>
           <div style={{ display: "flex", padding: "10px 24px" }}>
-            Go · Python · TypeScript · PostgreSQL · Claude Code
+            Python · Go · PostgreSQL · React
           </div>
           <div style={{ display: "flex", marginLeft: "auto", padding: "10px 24px", color: "#a89984" }}>
             {SITE.url.replace("https://", "")}

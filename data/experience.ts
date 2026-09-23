@@ -1,68 +1,52 @@
-import type { Education, Role, TimelineEntry } from "@/types";
+import type { Education, Role } from "@/types";
 
-/** Current role, at the level the engagement allows. Used by the resume. */
+/** Newest first, wording as on the CV. */
 export const roles: Role[] = [
   {
-    company: "Fairphone (contract)",
-    title: "Software Developer",
+    title: "Software Developer (B2B contract)",
+    company: "Fairphone",
     period: "2025 – Present",
-    summary:
-      "Data-heavy ERP engineering for supply-chain and sustainability operations.",
+    meta: "Freelance B2B",
+    summary: "ERP engineering for supply-chain and sustainability operations.",
     highlights: [
-      "Built Odoo modules (Python, PostgreSQL) for sustainability and procurement operations, replacing manual, hand-kept tracking with automated workflows and reporting over large datasets.",
-      "Designed and built the replication of ERP data into analytical warehouses, with reliable delivery as the core requirement.",
-      "Designed the architecture of a customer-facing web shop on top of Odoo: an API gateway in front of the ERP and separate frontend services.",
-      "Worked directly with stakeholders: gathered requirements from the people doing the work, explained technical trade-offs in plain language, and shipped modules and features end to end, tested and tailored to the production VPS.",
+      "Built Odoo modules (Python, PostgreSQL) for sustainability and procurement teams, replacing manual, hand-kept tracking with automated workflows and reporting over large datasets.",
+      "Designed and built replication of ERP data into analytical warehouses, with reliable delivery as the core requirement.",
+      "Designed the architecture for a customer-facing web shop on top of Odoo: an API gateway in front of the ERP with separate frontend services.",
+      "Worked directly with stakeholders: gathered requirements, explained technical trade-offs in plain language, and shipped tested features end to end to the production VPS.",
     ],
     note: "Client-owned, licensed software; details limited by agreement.",
   },
-];
-
-/** The story, oldest first. Rendered newest first like `git log`. */
-export const timeline: TimelineEntry[] = [
   {
-    ref: "init",
-    title: "robots, middle school",
-    detail:
-      "First programs, written for school robots in a language long since forgotten. The interest stuck.",
+    title: "Independent Full-Stack Developer",
+    company: "Self-directed",
+    period: "2024",
+    meta: "Belgrade",
+    highlights: [
+      "Moved from frontend into backend: built Node.js/Express servers and REST APIs with auth and PostgreSQL, plus the React frontends consuming them.",
+    ],
   },
   {
-    ref: "feat",
-    title: "linux in a vm",
-    detail: "Got hooked on Linux running in virtual machines on Windows 10.",
+    title: "Frontend Developer (part-time internship)",
+    company: "Local software company",
+    period: "2023",
+    meta: "Zaječar · alongside high school",
+    highlights: [
+      "Contributed to a production React codebase: built UI components and styling to spec.",
+      "Prepared request data for backend APIs and handled responses and state on the frontend.",
+      "Contributed to C# codebases on .NET in a Windows environment.",
+    ],
   },
   {
-    ref: "feat",
-    title: "hack the box, high school",
-    detail:
-      "Hack The Box is where Linux, Git, Nmap, and Kali Linux really came from. Same years: C# and .NET systems, and custom frontends in HTML, CSS, and JavaScript, then React.",
-  },
-  {
-    ref: "feat",
-    title: "software engineering, university",
-    detail: "BSc Software Engineering: enrolled in 2023, finishing by the end of 2027.",
-  },
-  {
-    ref: "feat",
-    title: "frontend developer",
-    detail:
-      "First year of professional work: frontend only, building web frontends, Angular included.",
-  },
-  {
-    ref: "feat",
-    title: "backend servers",
-    detail:
-      "Got introduced to backend servers while the paid work was still frontend websites.",
-  },
-  {
-    ref: "feat",
-    title: "software developer",
-    detail:
-      "Frontend and backend at once since then: full stack. Four years of professional experience in software development. Today: Odoo modules and data systems for Fairphone, with AI as a daily pair.",
+    title: "Web Development Intern (school programme)",
+    company: "Local team, Zaječar",
+    period: "2022",
+    meta: "Alongside school",
+    highlights: ["Built and styled websites in HTML and CSS."],
   },
 ];
 
 export const education: Education = {
-  degree: "Bachelor of Software Engineering",
-  status: "Enrolled 2023, finishing by the end of 2027",
+  degree: "BSc Software Engineering",
+  institution: "Singidunum University, Belgrade",
+  status: "Expected 2027",
 };

@@ -9,8 +9,8 @@ export default function Capabilities() {
       <SectionHeader
         id="capabilities-title"
         command="tree skills/"
-        title="Technologies, grouped by how I've used them"
-        lede="First-level items are in regular use on client and personal work; entries marked (also) are used less often or in specific projects."
+        title="Skills"
+        lede="Entries marked (working knowledge) are used less often."
       />
       <p className="text-[14px] text-gb-blue" aria-hidden="true">
         skills/
@@ -19,10 +19,10 @@ export default function Capabilities() {
         {skillGroups.map((group, groupIndex) => {
           const lastGroup = groupIndex === skillGroups.length - 1;
           const items = [
-            ...group.primary.map((item) => ({ name: item.name, also: false })),
+            ...group.primary.map((item) => ({ name: item.name, secondary: false })),
             ...(group.secondary ?? []).map((item) => ({
               name: item.note ? `${item.name} (${item.note})` : item.name,
-              also: true,
+              secondary: true,
             })),
           ];
           return (
@@ -33,24 +33,26 @@ export default function Capabilities() {
                 </span>
                 <span className="font-bold text-gb-blue">{group.category}/</span>
               </p>
-              <p className="pl-[4ch] text-[13px] leading-relaxed text-muted">
-                {group.usage}
-              </p>
+              {group.usage && (
+                <p className="pl-[4ch] text-[13px] leading-relaxed text-muted">
+                  {group.usage}
+                </p>
+              )}
               <ul>
                 {items.map((item, itemIndex) => {
                   const lastItem = itemIndex === items.length - 1;
                   return (
-                    <li key={item.name} className={item.also ? "text-muted" : "text-ink"}>
+                    <li
+                      key={item.name}
+                      className={item.secondary ? "text-muted" : "text-ink"}
+                    >
                       <span aria-hidden="true" className="text-gb-bg4">
                         {lastGroup ? "    " : "│   "}
                         {lastItem ? "└── " : "├── "}
                       </span>
                       {item.name}
-                      {item.also && (
-                        <span className="text-gb-bg4">
-                          {" "}
-                          (also)
-                        </span>
+                      {item.secondary && (
+                        <span className="text-gb-bg4"> (working knowledge)</span>
                       )}
                     </li>
                   );

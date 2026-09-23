@@ -2,16 +2,18 @@
 
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { resume } from "@/data";
 
 const chords: Record<string, { target: string; label: string }> = {
   h: { target: "/", label: "home" },
-  w: { target: "/#work", label: "work" },
+  w: { target: "/#work", label: "projects" },
   e: { target: "/#experience", label: "experience" },
   s: { target: "/#capabilities", label: "skills" },
   a: { target: "/#ai", label: "ai workflow" },
   l: { target: "/#homelab", label: "home lab" },
   c: { target: "/#contact", label: "contact" },
   r: { target: "/resume", label: "resume" },
+  d: { target: resume.url, label: resume.label.toLowerCase() },
 };
 
 function isTyping(target: EventTarget | null) {
@@ -24,6 +26,16 @@ function isTyping(target: EventTarget | null) {
     tag === "SELECT" ||
     el.isContentEditable
   );
+}
+
+/** Triggers a file download the way a click on an <a download> would. */
+function downloadFile(href: string) {
+  const anchor = document.createElement("a");
+  anchor.href = href;
+  anchor.download = "";
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
 }
 
 /** Vim-flavoured shortcuts: `g` + key jumps to a section, `:` focuses
@@ -66,7 +78,9 @@ export default function KeyboardNav() {
         const chord = chords[event.key];
         if (chord) {
           event.preventDefault();
-          if (chord.target.startsWith("/#") && window.location.pathname === "/") {
+          if (chord.target === resume.url) {
+            downloadFile(chord.target);
+          } else if (chord.target.startsWith("/#") && window.location.pathname === "/") {
             const el = document.getElementById(chord.target.slice(2));
             el?.scrollIntoView({ block: "start", behavior: "instant" });
             el?.focus({ preventScroll: true });

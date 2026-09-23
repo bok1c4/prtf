@@ -13,11 +13,6 @@ export interface PersonalInfo {
   links: Link[];
 }
 
-export interface Capability {
-  title: string;
-  detail: string;
-}
-
 export interface Principle {
   title: string;
   detail: string;
@@ -29,18 +24,19 @@ export interface Fact {
 }
 
 export interface Positioning {
-  eyebrow: string;
-  headline: string;
-  headlineEmphasis: string;
-  story: string;
+  /** Hero tagline, split so the second half can carry the accent color. */
+  taglineLead: string;
+  taglineFocus: string;
+  subline: string;
+  /** Hero bullets, all taken from the CV summary and experience. */
+  highlights: string[];
+  /** The CV summary, used by About and by /resume. */
   summary: string[];
   university: string;
   person: string[];
   workingWith: string[];
-  capabilities: Capability[];
   principles: Principle[];
   currently: Fact[];
-  short: string;
 }
 
 export interface SkillItem {
@@ -50,92 +46,45 @@ export interface SkillItem {
 
 export interface SkillGroup {
   category: string;
-  usage: string;
+  usage?: string;
   primary: SkillItem[];
+  /** Working knowledge; rendered as such on the site and the resume. */
   secondary?: SkillItem[];
 }
 
 export interface Role {
-  company: string;
   title: string;
+  company: string;
   period: string;
-  summary: string;
+  /** Engagement type and place, e.g. "Freelance B2B" or "Self-directed · Belgrade". */
+  meta?: string;
+  summary?: string;
   highlights: string[];
   note?: string;
 }
 
-export interface TimelineEntry {
-  ref: "init" | "feat";
-  title: string;
-  detail: string;
-}
-
 export interface Education {
   degree: string;
+  institution: string;
   status: string;
-  institution?: string;
 }
 
-export interface Decision {
-  decision: string;
-  rationale: string;
-}
-
-export type DiagramId = "toy-store";
-
-export type CaseStudyKind = "client" | "personal";
-
-export interface CaseStudy {
+export interface Project {
   slug: string;
   title: string;
-  summary: string;
-  seoDescription: string;
-  kind: CaseStudyKind;
-  featured: boolean;
-  client?: string;
-  period?: string;
+  /** One-line problem statement. */
+  problem: string;
+  stack: string[];
+  /** Two or three technical highlights. */
+  highlights: string[];
+  repo?: string;
   note?: string;
-  role: string;
-  roleDetail: string;
-  stakeholders: string[];
-  context: string[];
-  goals: string[];
-  features: string[];
-  architecture: string[];
-  dataFlow: string[];
-  implementation: string[];
-  decisions: Decision[];
-  challenges: string[];
-  results: string[];
-  stack: string[];
-  tags: string[];
-  links: Link[];
-  diagram?: DiagramId;
 }
 
-export interface MoreWork {
-  title: string;
-  description: string;
-  stack: string[];
-  link?: Link;
-}
-
-export interface ResumeProject {
-  name: string;
-  stack: string;
-  description: string;
-  link?: string;
-}
-
-/** Resume-only copy. Competencies, skills, experience, story, and
- *  education are derived from the same data the site renders. */
+/** Resume-only values; everything else on /resume derives from the site data. */
 export interface ResumeData {
   url: string;
   label: string;
-  headline: string;
-  summary: string;
-  note: string;
-  projects: ResumeProject[];
   updated: string;
 }
 
@@ -155,7 +104,6 @@ export interface AiWorkflow {
   prompting: { summary: string; practices: string[] };
   claudeCode: { summary: string; items: AiItem[] };
   mcp: { summary: string; items: AiItem[] };
-  environment: string[];
 }
 
 export interface HomeLabItem {
