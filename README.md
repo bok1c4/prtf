@@ -53,7 +53,13 @@ Types are in `types/index.ts`.
 
 ## Updating the CV
 
-Replace `public/Boris_Nikolic_CV.pdf` with the new file, then update `data/` so the site says the same thing. `/resume` and the shell read from `data/`, so nothing else needs to change.
+The CV is generated from the `/resume` route, so it always says what the site says. After changing `data/`, start the site and print the route to PDF with a headless Chromium (Chrome, Edge, or Brave):
+
+```bash
+chrome --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=public/Boris_Nikolic_CV.pdf http://localhost:3000/resume
+```
+
+The page carries its own print stylesheet (A4, one page, navigation hidden), so the browser's "Save as PDF" dialog produces the same result.
 
 ## Documentation
 

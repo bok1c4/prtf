@@ -4,7 +4,7 @@ Source of truth since 2026-09-23: the owner's CV (`public/Boris_Nikolic_CV.pdf`,
 
 ## From the CV, not verifiable from public sources
 
-- Four years of hands-on web development: web development intern (school programme, Zaječar, 2022), frontend developer (part-time internship, local software company, Zaječar, 2023), independent full-stack developer (self-directed, Belgrade, 2024), software developer on a B2B contract for Fairphone (2025 – present). Employer names for 2022 and 2023 are not given on the CV.
+- Four years of hands-on web development: web development intern (school programme, Zaječar, 2022), frontend developer (part-time internship, local software company, Zaječar, 2023), independent full-stack developer (self-directed, Belgrade, 2024), software developer on a B2B contract for Fairphone (2025 – present). Employer names for 2022 and 2023 are not given on the CV; the 2023 internship was at a high school partner company (shown as such), whose name the owner will give in interviews.
 - Fairphone work: Odoo modules for sustainability and procurement teams, replication of ERP data into analytical warehouses, the architecture of a customer-facing web shop, direct stakeholder work. Client-owned, licensed software; described only at the level the CV uses.
 - Working knowledge of Java (Spring Boot) and PHP (Laravel); Angular; GitLab CI; motion & graphic design.
 - The Order & revenue management platform (Go, Next.js, TypeScript, PostgreSQL) has no public repository.

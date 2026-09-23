@@ -24,12 +24,12 @@ export const positioning: Positioning = {
   highlights: [
     "Odoo/ERP modules and data pipelines in Python and PostgreSQL for Fairphone (2025 – present)",
     "Node.js/Express and Go services, with the React and Next.js frontends that consume them",
-    "Systems code in C/C++: HTTP server, multi-hop forward proxy, password manager",
+    "DevOps with security in mind: hardened Linux servers, Docker, CI/CD pipelines, monitoring",
     "Four years of hands-on web development, from frontend internships to contract engineering",
   ],
   summary: [
     "Backend-focused full-stack developer with four years of hands-on web development, progressing from frontend internships (2022–2023) through independent Node.js backend work (2024) to contract engineering for Fairphone (2025–present), where I build Odoo/ERP modules and data pipelines in Python and PostgreSQL.",
-    "I own features end to end, from stakeholder requirements to deployment, and also write Go services and systems code in C/C++.",
+    "I own features end to end, from stakeholder requirements to deployment, and also write Go services and take care of the DevOps side with security in mind: hardened Linux servers, Docker, CI/CD pipelines, and monitoring.",
   ],
   university:
     "BSc Software Engineering, Singidunum University, Belgrade. Expected 2027, alongside the work.",
