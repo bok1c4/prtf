@@ -27,9 +27,9 @@ export const roles: Role[] = [
   },
   {
     title: "Frontend Developer (part-time internship)",
-    company: "Local software company",
+    company: "High school partner company",
     period: "2023",
-    meta: "Zaječar · alongside high school",
+    meta: "Zaječar",
     highlights: [
       "Contributed to a production React codebase: built UI components and styling to spec.",
       "Prepared request data for backend APIs and handled responses and state on the frontend.",

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A personal portfolio site. All content is hardcoded in `data/` and matches the owner's CV in `public/Boris_Nikolic_CV.pdf`; there is no CMS, API, or database.
+A personal portfolio site. All content is hardcoded in `data/`; the CV in `public/Boris_Nikolic_CV.pdf` is generated from it. There is no CMS, API, or database.
 
 ## Stack
 
@@ -44,7 +44,7 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 
 ## Content rules
 
-- The CV in `public/Boris_Nikolic_CV.pdf` is the source of truth. Every fact on the site must trace to it, to a public GitHub repository, or to the owner's confirmation recorded in `CONTENT_REVIEW.md`. Do not turn an open question into a claim.
+- Every fact on the site must trace to the owner's CV wording (recorded in `CONTENT_REVIEW.md`), to a public GitHub repository, or to the owner's confirmation recorded there. Do not turn an open question into a claim.
 - No numeric metrics, project counts, or dates beyond those on the CV. The degree is expected in 2027; never say it is completed.
 - Client work (Fairphone) is described only at the level the CV uses; do not add internals, data, or numbers.
 - Copy leads with the role and the stack, not with AI. AI-assisted development appears under Skills and in its own section; keep it out of the hero and the summary.
@@ -54,7 +54,7 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 
 ## Resume and CV
 
-The download button serves the owner's own CV file, `public/Boris_Nikolic_CV.pdf` (path in `data/resume.ts`). `/resume` renders the same content from `data/` with print styles; it is not the source of the PDF. When the CV changes, replace the file and update `data/` to match.
+`/resume` renders the CV from `data/` with print styles sized for one A4 page; `public/Boris_Nikolic_CV.pdf` (path in `data/resume.ts`) is generated from that route with a headless Chromium (command in `README.md`). Regenerate it after any content change and check that it is still one page.
 
 ## Docker
 

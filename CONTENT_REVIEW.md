@@ -4,13 +4,13 @@ Source of truth since 2026-09-23: the owner's CV (`public/Boris_Nikolic_CV.pdf`,
 
 ## From the CV, not verifiable from public sources
 
-- Four years of hands-on web development: web development intern (school programme, Zaječar, 2022), frontend developer (part-time internship, local software company, Zaječar, 2023), independent full-stack developer (self-directed, Belgrade, 2024), software developer on a B2B contract for Fairphone (2025 – present). Employer names for 2022 and 2023 are not given on the CV.
+- Four years of hands-on web development: web development intern (school programme, Zaječar, 2022), frontend developer (part-time internship, local software company, Zaječar, 2023), independent full-stack developer (self-directed, Belgrade, 2024), software developer on a B2B contract for Fairphone (2025 – present). Employer names for 2022 and 2023 are not given on the CV; the 2023 internship was at a high school partner company (shown as such), whose name the owner will give in interviews.
 - Fairphone work: Odoo modules for sustainability and procurement teams, replication of ERP data into analytical warehouses, the architecture of a customer-facing web shop, direct stakeholder work. Client-owned, licensed software; described only at the level the CV uses.
 - Working knowledge of Java (Spring Boot) and PHP (Laravel); Angular; GitLab CI; motion & graphic design.
 - The Order & revenue management platform (Go, Next.js, TypeScript, PostgreSQL) has no public repository.
 - The 2023 internship also included contributing to C# codebases on .NET in a Windows environment (owner's statement, 2026-09-23; not on the CV PDF, shown on the site and /resume). C# (.NET) is also listed under Languages as working knowledge on the owner's request the same day.
 - BSc Software Engineering, Singidunum University, Belgrade, expected 2027.
-- Open to remote (CET); available as a B2B contractor or an employee. On 2026-09-23 the owner added: looking for full-time or part-time roles with flexible working hours, remote friendly. The site and /resume carry that longer line; the CV PDF still has the shorter one.
+- Open to remote (CET); available as a B2B contractor or an employee. Backend, full-stack, or DevOps roles, and the DevOps sentence in the summary (deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring): owner On 2026-09-23 the owner added: looking for full-time or part-time roles with flexible working hours, remote friendly. The site and /resume carry that longer line; the CV PDF still has the shorter one.
 
 ## From the owner's earlier statements, kept because the CV does not contradict them
 
