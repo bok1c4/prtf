@@ -25,10 +25,10 @@ export const positioning: Positioning = {
     "Odoo/ERP modules and data pipelines in Python and PostgreSQL for Fairphone (2025 – present)",
     "NestJS and Go services, with the React and Next.js frontends that consume them",
     "DevOps with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring",
-    "Four years of hands-on web development, from frontend internships to contract engineering",
+    "Close to five years of hands-on web development, from frontend internships to contract engineering",
   ],
   summary: [
-    "Backend-focused full-stack developer with four years of hands-on web development, progressing from frontend internships (2022–2023) through independent NestJS backend work (2024) to contract engineering for Fairphone (2025–present), where I build Odoo/ERP modules and data pipelines in Python and PostgreSQL.",
+    "Backend-focused full-stack developer with close to five years of hands-on web development, progressing from frontend internships (2022–2023) through independent NestJS backend work (2024) to contract engineering for Fairphone (2025–present), where I build Odoo/ERP modules and data pipelines in Python and PostgreSQL.",
     "I own features end to end, from stakeholder requirements to deployment, and also write Go services and take care of the DevOps side with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD pipelines, and monitoring.",
   ],
   university:

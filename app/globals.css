@@ -348,7 +348,7 @@
 
 @page {
   size: A4;
-  margin: 8mm 11mm;
+  margin: 7mm 11mm;
 }
 
 /* Print rules sit outside every @layer on purpose: unlayered styles win
@@ -387,7 +387,7 @@
     margin-top: 0.1rem;
   }
   .resume h2 {
-    margin: 0.45rem 0 0.2rem;
+    margin: 0.38rem 0 0.18rem;
     font-size: 6.8pt;
     padding-bottom: 0.12rem;
   }

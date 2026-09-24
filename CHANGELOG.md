@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-24: close to five years
+
+"Four years of hands-on web development" becomes "close to five years" in the hero highlight and the summary (About and `/resume`), on the owner's request. The CV PDF is regenerated.
+
 ## 2026-09-23: content matched to the CV
 
 The owner's CV (`public/Boris_Nikolic_CV.pdf`) is now the source of truth; the site says what it says, in the same words where the CV has them.
