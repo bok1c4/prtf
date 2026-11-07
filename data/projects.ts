@@ -15,6 +15,16 @@ export const projects: Project[] = [
     note: "Self-hosted on Forgejo",
   },
   {
+    slug: "snapsyncai",
+    title: "SnapSyncAi: AI image-editing SaaS",
+    problem:
+      "An image-editing SaaS: sign in, buy credits, and edit photos with AI transformations.",
+    stack: ["Next.js 14", "TypeScript", "MongoDB", "Cloudinary AI", "Clerk", "Stripe"],
+    highlights: [
+      "Photo restore, generative fill, object removal and recolor by text prompt, and background removal through Cloudinary's AI transformations; Clerk auth with webhooks syncing users to MongoDB; Stripe-paid credit packages.",
+    ],
+  },
+  {
     slug: "ecommerce-platform",
     title: "E-commerce platform (university project)",
     problem:
@@ -28,38 +38,15 @@ export const projects: Project[] = [
     repo: "https://github.com/bok1c4/toy_store",
   },
   {
-    slug: "systems-networking",
-    title: "Systems & networking in C/C++",
-    problem:
-      "Networking and security primitives written from the socket up, without a framework in between.",
-    stack: ["C", "C++", "POSIX sockets", "AES-256-GCM", "GPG"],
-    highlights: [
-      "Multi-client HTTP server from POSIX sockets up, and a multi-hop HTTP forward proxy with layered encryption (in progress).",
-      "Terminal password manager with per-secret hybrid encryption (AES-256-GCM, GPG).",
-    ],
-    repo: "https://github.com/bok1c4/HTTP-Proxy",
-  },
-  {
     slug: "insightify",
     title: "Insightify: website analysis tool",
     problem:
       "Submit a website URL and get an analysis of its design, content, and user experience.",
-    stack: ["Go", "chi", "chromedp", "OpenAI API", "Redis", "WebSockets", "Next.js"],
+    stack: ["Go", "chi", "chromedp", "OpenAI API", "OpenAI GPT-4o", "Redis", "WebSockets", "Next.js"],
     highlights: [
-      "Go (chi) service scrapes a submitted site with chromedp and passes the content to the OpenAI API for an analysis of design, content, and UX; Next.js frontend.",
+      "Go (chi) service scrapes a submitted site with chromedp and passes the content to OpenAI's GPT-4o (first direct API calls, later the Assistants API) for an analysis of design, content, and UX; Next.js frontend.",
     ],
     repo: "https://github.com/bok1c4/website-scraper",
-  },
-  {
-    slug: "rpg-campaign-manager",
-    title: "RPG campaign manager (university project)",
-    problem:
-      "University coursework: game masters run campaigns, sessions, and item catalogs while players manage characters and inventories.",
-    stack: ["Java 21", "Spring Boot 3", "JWT", "React"],
-    highlights: [
-      "Spring Boot REST API with JWT access and refresh tokens and role-based authorization, consumed by a React SPA.",
-    ],
-    repo: "https://github.com/bok1c4/rpg-campaign-manager",
   },
 ];
 

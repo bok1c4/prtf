@@ -31,8 +31,9 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "Data",
     primary: [
-      { name: "PostgreSQL" },
+      { name: "PostgreSQL (materialized views, partial indexes, advisory locks, PL/pgSQL)" },
       { name: "Redis" },
+      { name: "MongoDB" },
       { name: "Change data capture" },
       { name: "Query optimization" },
       { name: "RabbitMQ" },
@@ -47,6 +48,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Angular" },
       { name: "Tailwind CSS" },
       { name: "Redux Toolkit" },
+      { name: "Odoo OWL" },
     ],
   },
   {
@@ -63,9 +65,12 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "Also",
+    category: "Generative AI",
+    usage: "daily agentic coding with Claude Code and Codex",
     primary: [
-      { name: "AI-assisted development (Claude Code, Codex)" },
+      { name: "OpenAI API (GPT-4o, Assistants)" },
+      { name: "Cloudinary AI" },
+      { name: "prompt engineering" },
     ],
   },
 ];
