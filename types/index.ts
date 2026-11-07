@@ -48,6 +48,7 @@ export interface SkillItem {
 
 export interface SkillGroup {
   category: string;
+  /** Shown under the category on the site; follows the items after a semicolon on /resume. */
   usage?: string;
   primary: SkillItem[];
   /** Working knowledge; rendered as such on the site and the resume. */

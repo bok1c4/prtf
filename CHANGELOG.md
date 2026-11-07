@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-07: resume update
+
+Resume content from the owner's text of 2026-11-07; sources are in `CONTENT_REVIEW.md`, and the Fairphone details in `PROJECT_ARCHITECTURE.md`.
+
+- **Fairphone**: the descriptor reads "Python · Odoo 16 · PostgreSQL · OWL · GitLab. Responsible for the EU-side sustainability modules, both in production." Six bullets replace four: FairMaterials (tungsten added, 1 µg rounding, signed material ledger), GHG collectors (kgCO₂e, rule-matched emission factors, per-period currency rates), resumable background jobs, reporting (OWL dashboards, materialized views, FairMaterials dashboard load from 2.8 s to 0.55 s), the CDC API prototype, and the full cycle.
+- **2023 role**: "Frontend Developer (part-time internship)" becomes "Frontend Developer (part-time)".
+- **2022 role**: "Built and styled websites in HTML and CSS" adds JavaScript.
+- **Projects**: SnapSyncAi (AI image-editing SaaS) is added after the crypto store, without a link because its repository is private; its problem statement is composed from the owner's bullet. Insightify adds "OpenAI GPT-4o" to the stack and names GPT-4o (direct API calls, later the Assistants API) in its bullet. To keep the CV on one page, the RPG campaign manager and the Systems & networking in C/C++ project are removed (C/C++ stays under Languages).
+- **Skills**: Frontend adds Odoo OWL; Data names PostgreSQL features and adds MongoDB; "Also: AI-assisted development (Claude Code, Codex)" becomes a "Generative AI" group. A group's `usage` now follows its items after a semicolon on `/resume`.
+- **`/resume`**: the Education section becomes "Education & languages", with English (fluent) and Serbian (native) under the degree. A role without a descriptor shows its place on the title line.
+- **CV PDF** regenerated: one A4 page.
+
 ## 2026-11-07: verified facts, five projects
 
 Content corrected against the owner's verified facts; sources are recorded in `CONTENT_REVIEW.md`, and what may be said about each system in `PROJECT_ARCHITECTURE.md`.
