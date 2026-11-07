@@ -43,7 +43,7 @@ All copy lives in `data/`, and the site content matches the CV in `public/`:
 - `site.ts`: canonical URL, site name, title, and description (also the Open Graph values).
 - `personal.ts`: contact details, the hero tagline and sub-line, hero highlights, the summary (About and `/resume`), university, off-the-keyboard facts, the working-with-people list, principles, and the shell's `neofetch` facts.
 - `experience.ts`: roles, newest first, and education.
-- `projects.ts`: the four projects in CV order (problem statement, stack, highlights, repo link).
+- `projects.ts`: the projects in CV order (problem statement, stack, highlights, and a repo link or a note when there is no public repository).
 - `skills.ts`: skill groups as on the CV; secondary items are working knowledge.
 - `resume.ts`: the CV file path, button label, and last-updated month.
 - `ai.ts`: the "How I work with AI" section.

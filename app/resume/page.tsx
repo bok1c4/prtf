@@ -102,18 +102,22 @@ export default function ResumePage() {
           <h2 id="resume-projects">Projects</h2>
           {projects.map((project) => (
             <article key={project.slug} className="mt-3">
-              <h3>{project.title}</h3>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                <h3>{project.title}</h3>
+                {project.repo ? (
+                  <p className="text-[13px]">
+                    <a href={project.repo}>{bareUrl(project.repo)}</a>
+                  </p>
+                ) : (
+                  project.note && <p className="text-[13px] text-muted">{project.note}</p>
+                )}
+              </div>
               <p className="text-xs text-muted">{project.stack.join(", ")}</p>
               <ul className="text-[14px] leading-relaxed text-ink-2">
                 {project.highlights.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              {project.repo && (
-                <p className="text-[13px]">
-                  <a href={project.repo}>{bareUrl(project.repo)}</a>
-                </p>
-              )}
             </article>
           ))}
         </section>

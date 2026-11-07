@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-07: verified facts, five projects
+
+Content corrected against the owner's verified facts; sources are recorded in `CONTENT_REVIEW.md`, and what may be said about each system in `PROJECT_ARCHITECTURE.md`.
+
+- **Summary and hero**: "close to five years of hands-on web development" (it counted school internships) becomes "Python/Odoo developer at Fairphone since 2025 … building for the web since 2022". The Fairphone hero bullet names what the modules do (carbon accounting, critical-material traceability) instead of "data pipelines"; Rust joins the services line.
+- **Fairphone**: the web shop and API gateway bullet is removed (another team's project). New bullets for FairMaterials (from scratch, in production since August 2026) and GHG carbon accounting (ESG backport from Odoo v19 to v16). "Replication of ERP data into analytical warehouses" becomes a change data capture API prototype. "Production VPS" becomes production, with GitLab merge-request review. The engagement reads "Contracted via KIBNET, Belgrade".
+- **2023 internship**: the C#/.NET bullet is removed.
+- **Projects**: an e-commerce store in Rust with crypto payments (self-hosted on Forgejo, no public link) and Insightify (linking the public Go service `website-scraper`) are added; the Order & revenue management platform is removed. `toy_store` and the RPG campaign manager are labelled university projects; `toy_store` gains the API gateway point and Nginx rate limiting. The C/C++ and RPG entries are tightened for space.
+- **Skills**: Rust and Forgejo Actions added; C# (.NET) and motion & graphic design removed; "ERP data replication" becomes "Change data capture".
+- **Single source**: the projects lede ("5 projects, 4 with public code") is computed from `data/projects.ts`, and the contact availability text moves into `data/personal.ts`.
+- **`/resume`**: the repo link (or the no-repository note) sits on the project's title row. Print CSS sets a light color scheme, so Chromium on Windows no longer paints dark page margins.
+- **CV PDF** regenerated: one A4 page.
+
 ## 2026-09-24: close to five years
 
 "Four years of hands-on web development" becomes "close to five years" in the hero highlight and the summary (About and `/resume`), on the owner's request. The CV PDF is regenerated.

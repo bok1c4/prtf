@@ -6,13 +6,13 @@ export const roles: Role[] = [
     title: "Software Developer (B2B contract)",
     company: "Fairphone",
     period: "2025 – Present",
-    meta: "Freelance B2B",
+    meta: "Contracted via KIBNET, Belgrade",
     summary: "ERP engineering for supply-chain and sustainability operations.",
     highlights: [
-      "Built Odoo modules (Python, PostgreSQL) for sustainability and procurement teams, replacing manual, hand-kept tracking with automated workflows and reporting over large datasets.",
-      "Designed and built replication of ERP data into analytical warehouses, with reliable delivery as the core requirement.",
-      "Designed the architecture for a customer-facing web shop on top of Odoo: an API gateway in front of the ERP with separate frontend services.",
-      "Worked directly with stakeholders: gathered requirements, explained technical trade-offs in plain language, and shipped tested features end to end to the production VPS.",
+      "FairMaterials (written from scratch, live since August 2026): turns received purchases into grams of critical materials such as gold, cobalt, and tin via time-versioned recipes, allocated across fair-sourcing programs with largest-remainder rounding.",
+      "GHG carbon accounting: backport of Odoo's ESG module from v19 to v16 that calculates scope 1–3 emissions from purchase, supply, and accounting data; background rebuild jobs and materialized SQL views feed the dashboards.",
+      "Prototyped a change data capture API for external systems such as data warehouses: cursor-based batches with in-order client acknowledgements, so no record is skipped.",
+      "Full cycle with stakeholders: requirements, plain-language trade-offs, GitLab merge-request review, deployment to production.",
     ],
     note: "Client-owned, licensed software; details limited by agreement.",
   },
@@ -33,7 +33,6 @@ export const roles: Role[] = [
     highlights: [
       "Contributed to a production React codebase: built UI components and styling to spec.",
       "Prepared request data for backend APIs and handled responses and state on the frontend.",
-      "Contributed to C# codebases on .NET in a Windows environment.",
     ],
   },
   {

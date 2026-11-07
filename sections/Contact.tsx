@@ -2,7 +2,7 @@ import Pane from "@/components/ui/Pane";
 import SectionHeader from "@/components/ui/SectionHeader";
 import SmartLink from "@/components/ui/SmartLink";
 import ResumeButton from "@/components/ResumeButton";
-import { personal } from "@/data";
+import { personal, positioning } from "@/data";
 
 export default function Contact() {
   return (
@@ -13,7 +13,7 @@ export default function Contact() {
             id="contact-title"
             command="cat contact.md"
             title="Open to new roles and projects"
-            lede="Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours, remote friendly (CET), as a B2B contractor or an employee. Open to relocation within Europe for hybrid roles with a couple of office days a week. Email is the fastest way to reach me."
+            lede={positioning.contactLede}
             className="mb-4"
           />
           <a

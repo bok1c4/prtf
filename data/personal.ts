@@ -22,14 +22,14 @@ export const positioning: Positioning = {
   subline:
     "Based in Belgrade, Serbia · Remote friendly (CET) · Open to relocation within Europe · Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours · B2B contractor or employee",
   highlights: [
-    "Odoo/ERP modules and data pipelines in Python and PostgreSQL for Fairphone (2025 – present)",
-    "NestJS and Go services, with the React and Next.js frontends that consume them",
+    "Odoo 16 modules in Python and PostgreSQL for Fairphone (2025 – present): carbon accounting and critical-material traceability",
+    "NestJS, Go, and Rust services, with the React and Next.js frontends that consume them",
     "DevOps with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring",
-    "Close to five years of hands-on web development, from frontend internships to contract engineering",
+    "Building for the web since 2022, from frontend internships to contract engineering",
   ],
   summary: [
-    "Backend-focused full-stack developer with close to five years of hands-on web development, progressing from frontend internships (2022–2023) through independent NestJS backend work (2024) to contract engineering for Fairphone (2025–present), where I build Odoo/ERP modules and data pipelines in Python and PostgreSQL.",
-    "I own features end to end, from stakeholder requirements to deployment, and also write Go services and take care of the DevOps side with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD pipelines, and monitoring.",
+    "Python/Odoo developer at Fairphone since 2025, building Odoo 16 modules in Python and PostgreSQL for carbon accounting and critical-material traceability; building for the web since 2022.",
+    "I own features end to end, from stakeholder requirements to deployment, and also write Go and Rust services and take care of the DevOps side with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD pipelines, and monitoring.",
   ],
   university:
     "BSc Software Engineering, Singidunum University, Belgrade. Expected 2027, alongside the work.",
@@ -38,10 +38,12 @@ export const positioning: Positioning = {
     "The gym, trying to stay in shape.",
     "A good meal: pasta, or anything protein-rich.",
   ],
+  contactLede:
+    "Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours, remote friendly (CET), as a B2B contractor or an employee. Open to relocation within Europe for hybrid roles with a couple of office days a week. Email is the fastest way to reach me.",
   workingWith: [
     "Requirements gathered directly from the people who use the software, then turned into a scope both sides understand.",
     "Technical terms and trade-offs explained in plain language, so non-technical stakeholders can decide on priorities and timelines with the full picture.",
-    "Modules and features shipped end to end: built, tested, and tailored to the client's production VPS.",
+    "Modules and features shipped end to end: built, tested, reviewed in GitLab merge requests, and deployed to production.",
     "Alongside the stakeholders from the first requirement to delivery, so what ships matches how they actually work.",
   ],
   principles: [

@@ -46,12 +46,12 @@ Without local Bun or Node, build in a container: `docker run --rm -v "$PWD:/app"
 
 ## Content rules
 
-- Every fact on the site must trace to the owner's CV wording (recorded in `CONTENT_REVIEW.md`), to a public GitHub repository, or to the owner's confirmation recorded there. Do not turn an open question into a claim.
-- No numeric metrics, project counts, or dates beyond those on the CV. The degree is expected in 2027; never say it is completed.
-- Client work (Fairphone) is described only at the level the CV uses; do not add internals, data, or numbers.
+- Every fact on the site must trace to the owner's statements recorded in `CONTENT_REVIEW.md`, to a public GitHub repository, or to code that was read. Do not turn an open question into a claim.
+- No numeric metrics, counts of years of experience, or dates beyond those recorded in `CONTENT_REVIEW.md`. The project count in the projects lede is computed from `data/projects.ts`; do not hardcode it. The degree is expected in 2027; never say it is completed.
+- Client work (Fairphone) is described only at the level recorded in `PROJECT_ARCHITECTURE.md`, which the owner confirmed the agreement allows (2026-11-07); no client data, figures, or code. The CDC system is a prototype; never call it production. The customer-facing web shop on top of Odoo was another team's project; never mention it.
 - Copy leads with the role and the stack, not with AI. AI-assisted development appears under Skills and in its own section; keep it out of the hero and the summary.
 - No editor or tool lists (Neovim, tmux, lazygit) and no plugin names on the site.
-- Private repositories are never named on the site; two of them (`fair-material`, `DCP`) are client code and must not be described at all.
+- Private repositories are never linked from the site. The client repositories (`fair-material`, `DCP`) are never named or linked; the modules are described only as recorded in `PROJECT_ARCHITECTURE.md`. Insightify's app repository is private, so its project links the public `website-scraper` repository instead.
 - Copy style: no em dashes; use colons, commas, "·", or an en dash in date ranges. Keep copy lean, no filler, and do not let adjacent copy restate itself.
 - Every content change gets a dated entry in `CHANGELOG.md` (what changed and why); a new claim also gets its source recorded in `CONTENT_REVIEW.md`, and anything said about a system must stay within `PROJECT_ARCHITECTURE.md`.
 

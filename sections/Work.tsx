@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { positioning, projects } from "@/data";
 
 export default function Work() {
+  const withCode = projects.filter((project) => project.repo).length;
   return (
     <Pane id="work" title="~/work" labelledBy="work-title">
       <SectionHeader
@@ -12,7 +13,7 @@ export default function Work() {
         path="~/work"
         command="ls -la"
         title="Projects"
-        lede="Four projects, three with public code. Client work is under Experience."
+        lede={`${projects.length} projects, ${withCode} with public code. Client work is under Experience.`}
       />
       <ul className="divide-y divide-line border-y border-line">
         {projects.map((project) => (
