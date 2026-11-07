@@ -34,6 +34,8 @@ export interface Positioning {
   summary: string[];
   university: string;
   person: string[];
+  /** Availability paragraph under the contact heading. */
+  contactLede: string;
   workingWith: string[];
   principles: Principle[];
   currently: Fact[];

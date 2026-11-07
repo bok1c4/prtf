@@ -1,9 +1,9 @@
 import type { ResumeData } from "@/types";
 
-/** The downloadable CV is the owner's own file in public/; /resume
- *  renders the same content from the site data. */
+/** The downloadable CV in public/ is printed from /resume, which renders
+ *  the site data (command in README.md). */
 export const resume: ResumeData = {
   url: "/Boris_Nikolic_CV.pdf",
   label: "Download CV",
-  updated: "September 2026",
+  updated: "November 2026",
 };

@@ -357,6 +357,9 @@
 @media print {
   html,
   body {
+    /* Without this, Chromium on Windows paints the page margins with the
+       dark color scheme's canvas color. */
+    color-scheme: light !important;
     background: #ffffff !important;
     color: #17171a !important;
   }

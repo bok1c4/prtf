@@ -10,11 +10,11 @@ export const skillGroups: SkillGroup[] = [
       { name: "TypeScript/JavaScript" },
       { name: "SQL" },
       { name: "C/C++" },
+      { name: "Rust" },
     ],
     secondary: [
       { name: "Java (Spring Boot)" },
       { name: "PHP (Laravel)" },
-      { name: "C# (.NET)" },
     ],
   },
   {
@@ -33,7 +33,7 @@ export const skillGroups: SkillGroup[] = [
     primary: [
       { name: "PostgreSQL" },
       { name: "Redis" },
-      { name: "ERP data replication" },
+      { name: "Change data capture" },
       { name: "Query optimization" },
       { name: "RabbitMQ" },
       { name: "Scheduled jobs" },
@@ -57,6 +57,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Nginx" },
       { name: "GitHub Actions" },
       { name: "GitLab CI" },
+      { name: "Forgejo Actions" },
       { name: "Prometheus" },
       { name: "Grafana" },
     ],
@@ -65,7 +66,6 @@ export const skillGroups: SkillGroup[] = [
     category: "Also",
     primary: [
       { name: "AI-assisted development (Claude Code, Codex)" },
-      { name: "Motion & graphic design" },
     ],
   },
 ];
