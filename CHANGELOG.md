@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-21: software engineer, not a client's developer
+
+The owner asked for the summary to stop introducing them as a Fairphone/Odoo developer and to use "engineer"; sources are in `CONTENT_REVIEW.md`.
+
+- **Title**: "Software Developer" becomes "Software Engineer" in the hero tagline, the `/resume` header, the Open Graph image, the JSON-LD job title, and the shell (`whoami`, `neofetch`). The site title and description read "Software Engineer, backend-focused (Python, Go, PostgreSQL)". The role titles under Experience are unchanged.
+- **Summary** (About, `/resume`, `cat about.md`): opens with the role and the stack ("Software engineer with a backend focus: Python, Go, Rust, and PostgreSQL. Building for the web since 2022.") instead of "Python/Odoo developer at Fairphone since 2025". The second paragraph says how the owner works (features from requirements to deployment, building something new while maintaining what is in production, learning by building) and ends with AI coding agents (Claude Code and Codex: the owner writes the brief and reads and verifies every change), which replaces the DevOps sentence on the owner's request.
+- **Hero highlights**: the services line comes first; the Fairphone line follows as "In production at Fairphone (2025 – present): carbon accounting and critical-material traceability modules in Python and PostgreSQL", without "Odoo 16".
+- **Skills**: "Odoo module development" moves after the Go and NestJS items in Backend.
+- **About**: the university card adds "a master's degree is planned after". Not on `/resume` or the CV.
+- **`CLAUDE.md`**: the copy rule now allows AI as the last sentence of the summary and records the engineer-first positioning; also notes on anchors, hardcoded copy, the shell, and the one-page print budget.
+- **CV PDF** regenerated: one A4 page.
+
 ## 2026-11-07: resume update
 
 Resume content from the owner's text of 2026-11-07; sources are in `CONTENT_REVIEW.md`, and the Fairphone details in `PROJECT_ARCHITECTURE.md`.

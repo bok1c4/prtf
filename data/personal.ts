@@ -2,7 +2,7 @@ import type { PersonalInfo, Positioning } from "@/types";
 
 export const personal: PersonalInfo = {
   name: "Boris Nikolić",
-  title: "Software Developer",
+  title: "Software Engineer",
   handle: "boris@prtf",
   email: "borisnikolic2302@gmail.com",
   location: "Belgrade, Serbia",
@@ -17,22 +17,22 @@ export const personal: PersonalInfo = {
 };
 
 export const positioning: Positioning = {
-  taglineLead: "Software Developer",
+  taglineLead: "Software Engineer",
   taglineFocus: "Backend-focused Full-Stack (Python, Go, PostgreSQL, React)",
   subline:
     "Based in Belgrade, Serbia · Remote friendly (CET) · Open to relocation within Europe · Looking for full-time or part-time backend, full-stack, or DevOps roles with flexible working hours · B2B contractor or employee",
   highlights: [
-    "Odoo 16 modules in Python and PostgreSQL for Fairphone (2025 – present): carbon accounting and critical-material traceability",
     "NestJS, Go, and Rust services, with the React and Next.js frontends that consume them",
+    "In production at Fairphone (2025 – present): carbon accounting and critical-material traceability modules in Python and PostgreSQL",
     "DevOps with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD, monitoring",
     "Building for the web since 2022, from frontend internships to contract engineering",
   ],
   summary: [
-    "Python/Odoo developer at Fairphone since 2025, building Odoo 16 modules in Python and PostgreSQL for carbon accounting and critical-material traceability; building for the web since 2022.",
-    "I own features end to end, from stakeholder requirements to deployment, and also write Go and Rust services and take care of the DevOps side with security in mind: deploying and managing services, hardened Linux servers, Docker, CI/CD pipelines, and monitoring.",
+    "Software engineer with a backend focus: Python, Go, Rust, and PostgreSQL. Building for the web since 2022.",
+    "I take features from stakeholder requirements to deployment, usually building something new while maintaining what is already in production, and I keep learning by building, at work and on my own projects. I build with AI coding agents daily, mostly Claude Code and Codex: I write the brief, and I read and verify every change.",
   ],
   university:
-    "BSc Software Engineering, Singidunum University, Belgrade. Expected 2027, alongside the work.",
+    "BSc Software Engineering, Singidunum University, Belgrade. Expected 2027, alongside the work; a master's degree is planned after.",
   person: [
     "Sim racing, Counter-Strike, and cars.",
     "The gym, trying to stay in shape.",
@@ -79,7 +79,7 @@ export const positioning: Positioning = {
     },
   ],
   currently: [
-    { label: "role", value: "Software Developer" },
+    { label: "role", value: "Software Engineer" },
     { label: "open to", value: "Backend, full-stack, or DevOps · full-time or part-time, flexible hours · remote friendly (CET) · relocation within Europe for hybrid roles · B2B contractor or employee" },
     { label: "based", value: "Belgrade, Serbia" },
     {
